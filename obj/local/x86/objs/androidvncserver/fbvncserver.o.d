@@ -98,7 +98,8 @@ obj/local/x86/objs/androidvncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/keysym.h
+ jni/androidvncserver/LibVNCServer-0.9.7/rfb/keysym.h \
+ jni/androidvncserver/../screenshot/fb.h
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
@@ -297,3 +298,5 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
 
 jni/androidvncserver/LibVNCServer-0.9.7/rfb/keysym.h:
+
+jni/androidvncserver/../screenshot/fb.h:

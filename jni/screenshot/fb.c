@@ -30,14 +30,14 @@
 // log fb info
 void fb_dump(const struct fb* fb)
 {
-    D("%13s : %d", "bpp", fb->bpp);
-    D("%13s : %d", "size", fb->size);
-    D("%13s : %d", "width", fb->width);
-    D("%13s : %d", "height", fb->height);
-    D("%13s : %d %d %d %d", "ARGB offset",
+    printf("%13s : %d\n", "bpp", fb->bpp);
+    printf("%13s : %d\n", "size", fb->size);
+    printf("%13s : %d\n", "width", fb->width);
+    printf("%13s : %d\n", "height", fb->height);
+    printf("%13s : %d %d %d %d\n", "ARGB offset",
             fb->alpha_offset, fb->red_offset,
             fb->green_offset, fb->blue_offset);
-    D("%13s : %d %d %d %d", "ARGB length",
+    printf("%13s : %d %d %d %d\n", "ARGB length",
             fb->alpha_length, fb->red_length,
             fb->green_length, fb->blue_length);
 }

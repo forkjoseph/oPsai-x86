@@ -31,7 +31,7 @@ LOCAL_SRC_FILES:= \
 	LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.c \
 	LibVNCServer-0.9.7/libvncserver/zywrletemplate.c \
 	LibVNCServer-0.9.7/libvncserver/tight.c \
-		fbvncserver.c 
+		fbvncserver.c
 
 
 LOCAL_LDLIBS +=  -llog -lz -ldl -landroid	
@@ -51,6 +51,7 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../libpng \
 	$(LOCAL_PATH)/../jpeg \
 	$(LOCAL_PATH)/../jpeg-turbo \
+	$(LOCAL_PATH)/../screenshot 
 	
 LOCAL_STATIC_LIBRARIES := libjpeg libpng
 

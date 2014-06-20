@@ -37,7 +37,11 @@
 #include "rfb/rfb.h"
 #include "rfb/keysym.h"
 
+#include "fb.h" 
+
 /*****************************************************************************/
+
+
 
 /* Android does not use /dev/fb0. */
 #define FB_DEVICE "/dev/graphics/fb0"
@@ -82,81 +86,225 @@ static void ptrevent(int buttonMask, int x, int y, rfbClientPtr cl);
 
 /*****************************************************************************/
 
+static void* private_fb(struct fb* fb);
+static void dump_fb(const struct fb* fb);
+static int get_fb_format(const struct fb *fb);
+static char* find_fb_format(const struct fb *fb);
+struct fb fb;
+
+/*****************************************************************************/
+
 static void init_fb(void)
 {
 	size_t pixels;
 	size_t bytespp;
 
 	printf("*****Initializing frame buffer\n");
-	if ((fbfd = open(FB_DEVICE, O_RDWR)) < 0 )
-	{
-		printf("cannot open fb device %s\n", FB_DEVICE);
-		exit(EXIT_FAILURE);
-	}
-
-	printf("*****open: %d\n", fbfd);
-
-	if (ioctl(fbfd, FBIOGET_FSCREENINFO, &finfo) != 0)
-	{
-		printf("ioctl error from finfo\n");
-		exit(EXIT_FAILURE);
-	}
-
-
-	if (ioctl(fbfd, FBIOGET_VSCREENINFO, &scrinfo) != 0)
-	{
-		printf("ioctl error\n");
-		exit(EXIT_FAILURE);
-	}
-
-	printf("*****ioctl: %d\n", fbfd);
-
 
 	pixels = scrinfo.xres * scrinfo.yres;
 	bytespp = scrinfo.bits_per_pixel / 8;
 
-	fprintf(stderr, "xres=%d, yres=%d, xresv=%d, yresv=%d, xoffs=%d, yoffs=%d, bpp=%d\n", 
-	  (int)scrinfo.xres, (int)scrinfo.yres,
-	  (int)scrinfo.xres_virtual, (int)scrinfo.yres_virtual,
-	  (int)scrinfo.xoffset, (int)scrinfo.yoffset,
-	  (int)scrinfo.bits_per_pixel);
+	// fprintf(stderr, "xres=%d, yres=%d, xresv=%d, yresv=%d, xoffs=%d, yoffs=%d, bpp=%d\n", 
+	//   (int)scrinfo.xres, (int)scrinfo.yres,
+	//   (int)scrinfo.xres_virtual, (int)scrinfo.yres_virtual,
+	//   (int)scrinfo.xoffset, (int)scrinfo.yoffset,
+	//   (int)scrinfo.bits_per_pixel);
 
 	fprintf(stderr, "pixels * bytespp=%d\n", finfo.smem_len);
 
-	fbmmap = mmap(0, finfo.smem_len, PROT_READ | PROT_WRITE, MAP_SHARED, fbfd, 0);
+	fbmmap = private_fb(&fb);
+	// fbmmap = mmap(0, finfo.smem_len, PROT_READ | PROT_WRITE, MAP_SHARED, fbfd, 0);
 	// charfbmmap = (char*)mmap(0, finfo.smem_len, PROT_READ, MAP_SHARED, fbfd, 0);
 	printf("fbmmap is pointing to %p\n", fbmmap);
 
-	int y, x;
-	for ( y = 0; y < 800; y++) { 
-		for ( x = 0; x < 1280; x++) { 
-			if (fbmmap[(800*y) + x] != 0)
-				printf ("Current block looking at %x\n", fbmmap[(800*y) + x]);
-		}
-		printf("Checked %d\n", y);
-	}
+	// int y, x;
+	// for ( y = 0; y < 800; y++) { 
+		// for ( x = 0; x < 1280; x++) { 
+			// if (fbmmap[(800*y) + x] != 0)
+				// printf ("Current block looking at %x\n", fbmmap[(800*y) + x]);
+		// }
+	// }
 	printf("Current fb color: %x\n", fbmmap[(1280*600) + 640]);
 
-	/*long int location = 0;
-	int x, y;
-	 for (y = 100; y < 300; y++) {
-        for (x = 100; x < 300; x++) {
-            location = (x+scrinfo.xoffset) * (scrinfo.bits_per_pixel/8) +
-                       (y+scrinfo.yoffset) * finfo.line_length;
-            printf("Coloring at %d\n", location);
-            *(fbmmap + location) = 100;        // Some blue
-            *(fbmmap + location + 1) = 15+(x-100)/2;     // A little green
-            *(fbmmap + location + 2) = 200-(y-100)/5;    // A lot of red
-            *(fbmmap + location + 3) = 0;      // No transparency
-            location += 4;
-        }
-    }*/
 
 	if (fbmmap == MAP_FAILED)
 	{
 		printf("mmap failed\n");
 		exit(EXIT_FAILURE);
 	}
+}
+
+static void* private_fb( struct fb *fb){
+    struct fb_var_screeninfo vinfo;
+    unsigned char *raw; 
+    unsigned int bytespp;
+    unsigned int raw_size;
+    unsigned int raw_line_length;
+    ssize_t read_size;
+    int fb_temp;
+
+    if ((fb_temp = open(FB_DEVICE, O_RDWR)) < 0 ) 
+    	return NULL;
+    printf("framebuffer opened\n");
+
+	if (ioctl(fb_temp, FBIOGET_FSCREENINFO, &finfo) != 0)
+	{
+		printf("ioctl error from finfo\n");
+		close(fb_temp);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("fixed screen info opened\n");
+
+	if (ioctl(fb_temp, FBIOGET_VSCREENINFO, &vinfo) != 0)
+	{
+		printf("ioctl error\n");
+		close(fb_temp);
+		exit(EXIT_FAILURE);
+	}
+
+	printf("virtual screen info opened\n");
+
+	bytespp = vinfo.bits_per_pixel / 8;
+	raw_line_length = finfo.line_length;
+	raw_size = vinfo.yres * raw_line_length;
+
+	fb->bpp = vinfo.bits_per_pixel;
+    fb->size = vinfo.xres * vinfo.yres * bytespp;
+    fb->width = vinfo.xres;
+    fb->height = vinfo.yres;
+    fb->red_offset = vinfo.red.offset;
+    fb->red_length = vinfo.red.length;
+    fb->green_offset = vinfo.green.offset;
+    fb->green_length = vinfo.green.length;
+    fb->blue_offset = vinfo.blue.offset;
+    fb->blue_length = vinfo.blue.length;
+    fb->alpha_offset = vinfo.transp.offset;
+    fb->alpha_length = vinfo.transp.length;
+
+    raw = malloc(raw_size);
+    if (!raw) {
+    	printf("raw: memory error\n");
+    	close(fb_temp);
+    	return NULL;
+    }
+	unsigned int active_buffer_offset = 0;
+ 	int num_buffers = 0;
+    if (finfo.smem_len >= (raw_size * (num_buffers + 1))) {
+        active_buffer_offset = raw_size * num_buffers;
+    }
+
+    // display debug fb info
+    dump_fb(fb);
+    printf("%13s : %u\n", "bytespp", bytespp);
+    printf("%13s : %u\n", "raw size", raw_size);
+    printf("%13s : %u\n", "yoffset", vinfo.yoffset);
+    printf("%13s : %u\n", "pad offset", (raw_line_length / bytespp) - fb->width);
+    printf("%13s : %u\n", "buffer offset", active_buffer_offset);
+
+    lseek(fb_temp, active_buffer_offset, SEEK_SET);
+    read_size = read(fb_temp, raw, raw_size);
+   
+    printf("buffer size: %d\n", read_size);
+
+    if (read_size < 0 || (unsigned)read_size != raw_size) {
+    	printf("read_size: read error\n");
+    	close(fb_temp);
+	    free(raw);
+		exit(EXIT_FAILURE);
+	}
+
+	unsigned int padding_offset = (raw_line_length / bytespp) - fb->width;
+	printf("%s : %d\n", "padding_offset", padding_offset);
+    fb->data = raw;
+
+    // free(raw);
+    return fb->data;
+}
+
+static void dump_fb(const struct fb* fb)
+{
+    printf("%13s : %d\n", "bpp", fb->bpp);
+    printf("%13s : %d\n", "size", fb->size);
+    printf("%13s : %d\n", "width", fb->width);
+    printf("%13s : %d\n", "height", fb->height);
+    char *c;
+    c =  find_fb_format(fb);
+	printf("%13s : %s\n", "fb foramt", c);
+    printf("%s %s : %d %d %d %d\n", c, "offset",
+            fb->alpha_offset, fb->red_offset,
+            fb->green_offset, fb->blue_offset);
+    printf("%s %s : %d %d %d %d\n", c, "length",
+            fb->alpha_length, fb->red_length,
+            fb->green_length, fb->blue_length);
+}
+
+static char* find_fb_format(const struct fb *fb) {
+	int x;
+	// x = get_fb_format(fb);
+	char *c;
+	// switch(x) {
+	// 	case 0 : 
+	// 		c = "unknown";
+	// 		break;
+	// 	case 1:
+	// 		c = "RGB565";
+	// 		break;
+	// 	case 2:
+	// 		c = "ARGB8888";
+	// 		break;
+	// 	case 3:
+	// 		c = "RGBA8888";
+	// 		break;
+	// 	case 4:
+	// 		c = "ABGR8888";
+	// 		break;
+	// 	case 5:
+	// 		c = "BGRA8888";
+	// 		break;
+	// }
+	//just for galaxy tab 3
+	c = "ARGB8888";
+	return c;
+}
+
+static int get_fb_format(const struct fb *fb)
+{
+    int ao = fb->alpha_offset;
+    int ro = fb->red_offset;
+    int go = fb->green_offset;
+    int bo = fb->blue_offset;
+
+#define FB_FORMAT_UNKNOWN   0
+#define FB_FORMAT_RGB565    1
+#define FB_FORMAT_ARGB8888  2
+#define FB_FORMAT_RGBA8888  3
+#define FB_FORMAT_ABGR8888  4
+#define FB_FORMAT_BGRA8888  5
+#define FB_FORMAT_RGBX8888  FB_FORMAT_RGBA8888
+
+    /* TODO: use offset */
+    if (fb->bpp == 16)
+        return FB_FORMAT_RGB565;
+
+    /* TODO: validate */
+    if (ao == 0 && ro == 8)
+        return FB_FORMAT_ARGB8888;
+
+    if (ao == 0 && ro == 24 && go == 16 && bo == 8)
+        return FB_FORMAT_RGBX8888;
+
+    if (ao == 0 && bo == 8)
+        return FB_FORMAT_ABGR8888;
+
+    if (ro == 0)
+        return FB_FORMAT_RGBA8888;
+
+    if (bo == 0)
+        return FB_FORMAT_BGRA8888;
+
+    /* fallback */
+    return FB_FORMAT_UNKNOWN;
 }
 
 static void cleanup_fb(void)
@@ -562,10 +710,7 @@ a press and release of button 5.
 
 void print_usage(char **argv)
 {
-	printf("%s [-k device] [-t device] [-h]\n"
-		"-k device: keyboard device node, default is /dev/input/event3\n"
-		"-t device: touch device node, default is /dev/input/event1\n"
-		"-h : print this help\n");
+
 }
 
 int main(int argc, char **argv)
@@ -599,31 +744,34 @@ int main(int argc, char **argv)
 	}
 
 	printf("Initializing framebuffer device " FB_DEVICE "...\n");
-	init_fb();
-	printf("Initializing keyboard device %s ...\n", KBD_DEVICE);
-	init_kbd();
-	printf("Initializing touch device %s ...\n", TOUCH_DEVICE);
-	init_touch();
-
-	printf("Initializing VNC server:\n");
-	printf("	width:  %d\n", (int)scrinfo.xres);
-	printf("	height: %d\n", (int)scrinfo.yres);
-	printf("	bpp:    %d\n", (int)scrinfo.bits_per_pixel);
-	printf("	port:   %d\n", (int)VNC_PORT);
-	init_fb_server(argc, argv);
-
-	/* Implement our own event loop to detect changes in the framebuffer. */
-	while (1)
-	{
-		while (vncscr->clientHead == NULL)
-			rfbProcessEvents(vncscr, 100000);
-
-		rfbProcessEvents(vncscr, 100000);
-		update_screen();
+	while(1){
+		init_fb();
+		sleep(1);
 	}
+	// printf("Initializing keyboard device %s ...\n", KBD_DEVICE);
+	// init_kbd();
+	// printf("Initializing touch device %s ...\n", TOUCH_DEVICE);
+	// init_touch();
 
-	printf("Cleaning up...\n");
-	cleanup_fb();
-	cleanup_kdb();
-	cleanup_touch();
+	// printf("Initializing VNC server:\n");
+	// printf("	width:  %d\n", (int)scrinfo.xres);
+	// printf("	height: %d\n", (int)scrinfo.yres);
+	// printf("	bpp:    %d\n", (int)scrinfo.bits_per_pixel);
+	// printf("	port:   %d\n", (int)VNC_PORT);
+	// init_fb_server(argc, argv);
+
+	// /* Implement our own event loop to detect changes in the framebuffer. */
+	// while (1)
+	// {
+	// 	while (vncscr->clientHead == NULL)
+	// 		rfbProcessEvents(vncscr, 100000);
+
+	// 	rfbProcessEvents(vncscr, 100000);
+	// 	update_screen();
+	// }
+
+	// printf("Cleaning up...\n");
+	// cleanup_fb();
+	// cleanup_kdb();
+	// cleanup_touch();
 }

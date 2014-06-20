@@ -1,2 +1,0 @@
-set solib-search-path ./obj/local/x86
-directory /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include jni/androidvncserver jni/androidvncserver/../screenMethods jni/androidvncserver/LibVNCServer-0.9.7/libvncserver jni/androidvncserver/LibVNCServer-0.9.7/rfb jni/androidvncserver/../libpng jni/androidvncserver/../jpeg jni/androidvncserver/../jpeg-turbo jni/jpeg jni/libpng jni/screenshot/../libpng jni/screenshot/../jpeg jni/screenshot/../jpeg-turbo /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/system
