@@ -1,20 +1,3 @@
-/*
- * $Id$
- *
- * This program is free software; you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by the
- * Free Software Foundation; either version 2, or (at your option) any
- * later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * This project is an adaptation of the original fbvncserver for the iPAQ
- * and Zaurus.
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,11 +22,6 @@
 
 #include "fb.h" 
 
-/*****************************************************************************/
-
-
-
-/* Android does not use /dev/fb0. */
 #define FB_DEVICE "/dev/graphics/fb0"
 static char KBD_DEVICE[256] = "/dev/input/event3";
 static char TOUCH_DEVICE[256] = "/dev/input/event1";
@@ -86,6 +64,7 @@ static void ptrevent(int buttonMask, int x, int y, rfbClientPtr cl);
 
 /*****************************************************************************/
 
+static void init_private_fb(struct fb* fb);
 static void* private_fb(struct fb* fb);
 static void dump_fb(const struct fb* fb);
 static int get_fb_format(const struct fb *fb);
@@ -99,23 +78,17 @@ static void init_fb(void)
 	size_t pixels;
 	size_t bytespp;
 
-	printf("*****Initializing frame buffer\n");
-
 	pixels = scrinfo.xres * scrinfo.yres;
 	bytespp = scrinfo.bits_per_pixel / 8;
 
-	// fprintf(stderr, "xres=%d, yres=%d, xresv=%d, yresv=%d, xoffs=%d, yoffs=%d, bpp=%d\n", 
-	//   (int)scrinfo.xres, (int)scrinfo.yres,
-	//   (int)scrinfo.xres_virtual, (int)scrinfo.yres_virtual,
-	//   (int)scrinfo.xoffset, (int)scrinfo.yoffset,
-	//   (int)scrinfo.bits_per_pixel);
+	// fprintf(stderr, "pixels * bytespp=%d\n", finfo.smem_len);
 
-	fprintf(stderr, "pixels * bytespp=%d\n", finfo.smem_len);
-
+	printf("Initializing frame buffer...\n");
+	init_private_fb (&fb);
 	fbmmap = private_fb(&fb);
 	// fbmmap = mmap(0, finfo.smem_len, PROT_READ | PROT_WRITE, MAP_SHARED, fbfd, 0);
-	// charfbmmap = (char*)mmap(0, finfo.smem_len, PROT_READ, MAP_SHARED, fbfd, 0);
-	printf("fbmmap is pointing to %p\n", fbmmap);
+	printf("%15s : %p\n", "fbmmap addr", fbmmap);
+
 
 	// int y, x;
 	// for ( y = 0; y < 800; y++) { 
@@ -124,7 +97,8 @@ static void init_fb(void)
 				// printf ("Current block looking at %x\n", fbmmap[(800*y) + x]);
 		// }
 	// }
-	printf("Current fb color: %x\n", fbmmap[(1280*600) + 640]);
+
+	printf("%15s : %x\n", "current color", fbmmap[(1280*600) + 640]);
 
 
 	if (fbmmap == MAP_FAILED)
@@ -132,38 +106,34 @@ static void init_fb(void)
 		printf("mmap failed\n");
 		exit(EXIT_FAILURE);
 	}
+	printf("\n");
 }
 
-static void* private_fb( struct fb *fb){
-    struct fb_var_screeninfo vinfo;
-    unsigned char *raw; 
-    unsigned int bytespp;
-    unsigned int raw_size;
-    unsigned int raw_line_length;
-    ssize_t read_size;
-    int fb_temp;
+struct fb_var_screeninfo vinfo;
+unsigned char *raw; 
+unsigned int bytespp;
+unsigned int raw_size;
+unsigned int raw_line_length;
+ssize_t read_size;
+int fb_temp;
 
-    if ((fb_temp = open(FB_DEVICE, O_RDWR)) < 0 ) 
-    	return NULL;
-    printf("framebuffer opened\n");
+static void init_private_fb(struct fb* fb) {
+	if ((fb_temp = open(FB_DEVICE, O_RDWR)) < 0 ) 
+    	return;
 
-	if (ioctl(fb_temp, FBIOGET_FSCREENINFO, &finfo) != 0)
+    if (ioctl(fb_temp, FBIOGET_FSCREENINFO, &finfo) != 0)
 	{
 		printf("ioctl error from finfo\n");
 		close(fb_temp);
 		exit(EXIT_FAILURE);
 	}
 
-	printf("fixed screen info opened\n");
-
-	if (ioctl(fb_temp, FBIOGET_VSCREENINFO, &vinfo) != 0)
+	if (ioctl(fb_temp, FBIOGET_VSCREENINFO, &vinfo) != 0 )
 	{
 		printf("ioctl error\n");
 		close(fb_temp);
 		exit(EXIT_FAILURE);
 	}
-
-	printf("virtual screen info opened\n");
 
 	bytespp = vinfo.bits_per_pixel / 8;
 	raw_line_length = finfo.line_length;
@@ -182,6 +152,18 @@ static void* private_fb( struct fb *fb){
     fb->alpha_offset = vinfo.transp.offset;
     fb->alpha_length = vinfo.transp.length;
 
+    dump_fb(fb);
+    printf("%15s : %u\n", "bytespp", bytespp);
+    printf("%15s : %u\n", "raw size", raw_size);
+}
+
+
+
+static void* private_fb( struct fb *fb){
+	// if (raw != NULL)
+	// 	free(raw);
+
+
     raw = malloc(raw_size);
     if (!raw) {
     	printf("raw: memory error\n");
@@ -190,22 +172,14 @@ static void* private_fb( struct fb *fb){
     }
 	unsigned int active_buffer_offset = 0;
  	int num_buffers = 0;
-    if (finfo.smem_len >= (raw_size * (num_buffers + 1))) {
-        active_buffer_offset = raw_size * num_buffers;
-    }
 
     // display debug fb info
-    dump_fb(fb);
-    printf("%13s : %u\n", "bytespp", bytespp);
-    printf("%13s : %u\n", "raw size", raw_size);
-    printf("%13s : %u\n", "yoffset", vinfo.yoffset);
-    printf("%13s : %u\n", "pad offset", (raw_line_length / bytespp) - fb->width);
-    printf("%13s : %u\n", "buffer offset", active_buffer_offset);
 
     lseek(fb_temp, active_buffer_offset, SEEK_SET);
     read_size = read(fb_temp, raw, raw_size);
-   
-    printf("buffer size: %d\n", read_size);
+  
+  	if (read_size < 0)
+  		printf("%15s : %d\n", "buffer size", read_size);
 
     if (read_size < 0 || (unsigned)read_size != raw_size) {
     	printf("read_size: read error\n");
@@ -213,24 +187,20 @@ static void* private_fb( struct fb *fb){
 	    free(raw);
 		exit(EXIT_FAILURE);
 	}
-
-	unsigned int padding_offset = (raw_line_length / bytespp) - fb->width;
-	printf("%s : %d\n", "padding_offset", padding_offset);
     fb->data = raw;
 
-    // free(raw);
     return fb->data;
 }
 
 static void dump_fb(const struct fb* fb)
 {
-    printf("%13s : %d\n", "bpp", fb->bpp);
-    printf("%13s : %d\n", "size", fb->size);
-    printf("%13s : %d\n", "width", fb->width);
-    printf("%13s : %d\n", "height", fb->height);
+    printf("%15s : %d\n", "bpp", fb->bpp);
+    printf("%15s : %d\n", "size", fb->size);
+    printf("%15s : %d\n", "width", fb->width);
+    printf("%15s : %d\n", "height", fb->height);
     char *c;
     c =  find_fb_format(fb);
-	printf("%13s : %s\n", "fb foramt", c);
+	printf("%15s : %s\n", "fb foramt", c);
     printf("%s %s : %d %d %d %d\n", c, "offset",
             fb->alpha_offset, fb->red_offset,
             fb->green_offset, fb->blue_offset);
@@ -370,6 +340,9 @@ static void init_fb_server(int argc, char **argv)
 {
 	printf("Initializing server...\n");
 
+	int p;
+	p = open(FB_DEVICE, O_RDWR);
+	ioctl(p, FBIOGET_VSCREENINFO, &scrinfo);
 	/* Allocate the VNC server buffer to be managed (not manipulated) by 
 	 * libvncserver. */
 	vncbuf = calloc(scrinfo.xres * scrinfo.yres, scrinfo.bits_per_pixel / 2);
@@ -468,7 +441,7 @@ uint16_t 	pad2
 
 //#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r)<<16)&0x00ffffff)|((((p>>g))<<8)&0x00ffffff)|(((p>>b)&0x00ffffff))
 // -> this one is worse :( 
-#define PIXEL_FB_TO_RFB(p,r,g,b) ((p>>r)&0x1f001f)|(((p>>g)&0x1f001f)<<5)|(((p>>b)&0x1f001f)<<10)
+#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r) << 16)&0x1f001f)|((((p>>g) << 8)&0x1f001f)<<5)|(((p>>b)&0x1f001f)<<10)
 
 static void update_screen(void)
 {
@@ -478,10 +451,13 @@ static void update_screen(void)
 	varblock.min_i = varblock.min_j = 9999;
 	varblock.max_i = varblock.max_j = -1;
 
+	free(fbmmap);
+	fbmmap = private_fb(&fb);
+
 	f = (unsigned int *)fbmmap;        /* -> framebuffer         */
 	c = (unsigned int *)fbbuf;         /* -> compare framebuffer */
 	r = (unsigned int *)vncbuf;        /* -> remote framebuffer  */
-	printf("f: %x   c: %x   r: %x\n", *f,*c,*r);
+	// printf("f: %x   c: %x   r: %x\n", *f,*c,*r);
 
 	for (y = 0; y < scrinfo.yres; y++)
 	{
@@ -498,7 +474,7 @@ static void update_screen(void)
 				 * gain using hextile encoding. */
 				if (pixel == 0x18e320e4 || pixel == 0x20e418e3)
 					pixel = 0x18e318e3;
-				printf("Pixel: %x\n", pixel);
+				// printf("Pixel: %x\n", pixel);
 				*r = PIXEL_FB_TO_RFB(pixel,
 				  varblock.r_offset, varblock.g_offset, 
 				  varblock.b_offset);
@@ -543,6 +519,8 @@ static void update_screen(void)
 		rfbProcessEvents(vncscr, 10000);
 	}
 }
+
+static 
 
 
 /*****************************************************************************/
@@ -706,16 +684,10 @@ a press and release of button 5.
 		injectTouchEvent(0, x, y);
 	} 
 }
-/*****************************************************************************/
-
-void print_usage(char **argv)
-{
-
-}
 
 int main(int argc, char **argv)
 {
-	printf("WELCOME TO GEORGIA TECH :) \n");
+	printf("\n\n======= oPsai VNCServer Daemon initiating =======\n\n");
 	if(argc > 1)
 	{
 		int i=1;
@@ -725,10 +697,6 @@ int main(int argc, char **argv)
 			{
 				switch(*(argv[i] + 1))
 				{
-					case 'h':
-						print_usage(argv);
-						exit(0);
-						break;
 					case 'k':
 						i++;
 						strcpy(KBD_DEVICE, argv[i]);
@@ -744,34 +712,25 @@ int main(int argc, char **argv)
 	}
 
 	printf("Initializing framebuffer device " FB_DEVICE "...\n");
-	while(1){
-		init_fb();
-		sleep(1);
+	init_fb();
+	printf("Initializing keyboard device %s ...\n", KBD_DEVICE);
+	init_kbd();
+	printf("Initializing touch device %s ...\n", TOUCH_DEVICE);
+	init_touch();
+
+	init_fb_server(argc, argv);
+
+	/* Implement our own event loop to detect changes in the framebuffer. */
+	while (1)
+	{
+		// while (vncscr->clientHead == NULL)
+		// 	rfbProcessEvents(vncscr, 100000);
+		rfbProcessEvents(vncscr, 100000);
+		update_screen();
 	}
-	// printf("Initializing keyboard device %s ...\n", KBD_DEVICE);
-	// init_kbd();
-	// printf("Initializing touch device %s ...\n", TOUCH_DEVICE);
-	// init_touch();
 
-	// printf("Initializing VNC server:\n");
-	// printf("	width:  %d\n", (int)scrinfo.xres);
-	// printf("	height: %d\n", (int)scrinfo.yres);
-	// printf("	bpp:    %d\n", (int)scrinfo.bits_per_pixel);
-	// printf("	port:   %d\n", (int)VNC_PORT);
-	// init_fb_server(argc, argv);
-
-	// /* Implement our own event loop to detect changes in the framebuffer. */
-	// while (1)
-	// {
-	// 	while (vncscr->clientHead == NULL)
-	// 		rfbProcessEvents(vncscr, 100000);
-
-	// 	rfbProcessEvents(vncscr, 100000);
-	// 	update_screen();
-	// }
-
-	// printf("Cleaning up...\n");
-	// cleanup_fb();
-	// cleanup_kdb();
-	// cleanup_touch();
+	printf("Cleaning up...\n");
+	cleanup_fb();
+	cleanup_kdb();
+	cleanup_touch();
 }
