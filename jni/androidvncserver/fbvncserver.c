@@ -338,7 +338,7 @@ static void cleanup_touch()
 
 static void init_fb_server(int argc, char **argv)
 {
-	printf("Initializing server...\n");
+	printf("\nInitializing server...\n");
 
 	int p;
 	p = open(FB_DEVICE, O_RDWR);
@@ -353,7 +353,7 @@ static void init_fb_server(int argc, char **argv)
 	fbbuf = calloc(scrinfo.xres * scrinfo.yres, scrinfo.bits_per_pixel / 2);
 	assert(fbbuf != NULL);
 
-	printf("*************** scrinfo.bits_per_pixel: %d \n", scrinfo.bits_per_pixel);
+	// printf("*************** scrinfo.bits_per_pixel: %d \n", scrinfo.bits_per_pixel);
 	/* TODO: This assumes scrinfo.bits_per_pixel is 16. */
 	/* A pixel is one dot on the screen. The number of bytes in a pixel will depend 
 	on the number of samples in that pixel and the number of bits in each sample.
@@ -367,8 +367,7 @@ static void init_fb_server(int argc, char **argv)
 	 eight bits per sample (since that's how 32-bit color is defined), 
 	 and four bytes per pixel (the smallest multiple of eight bits in which the 32-bit pixel will fit.*/
 
-	vncscr = rfbGetScreen(&argc, argv, scrinfo.xres, scrinfo.yres,
-						 8, 4, 4);
+	vncscr = rfbGetScreen(&argc, argv, scrinfo.xres, scrinfo.yres, 8, 4, 4);
 	assert(vncscr != NULL);
 	/*
 		int bitsPerSample,int samplesPerPixel, int bytesPerPixel	 
@@ -383,7 +382,7 @@ static void init_fb_server(int argc, char **argv)
 	from http://stuff.mit.edu/afs/sipb/project/scanner/bin/html/vuesc13.htm
 	*/
 
-	vncscr->desktopName = "Android";
+	vncscr->desktopName = "oPsai";
 	vncscr->frameBuffer = (char *)vncbuf;
 	vncscr->alwaysShared = TRUE;
 	vncscr->httpDir = NULL;
@@ -409,39 +408,39 @@ uint8_t 	pad1
 uint16_t 	pad2
 
 */
-	printf("******vncscr->depth: %d\n",vncscr->serverFormat.depth);
-	printf("******vncscr->bitsPerPixel: %d\n",vncscr->serverFormat.bitsPerPixel);
-	printf("******vncscr->redMax: %d\n",vncscr->serverFormat.redMax);
-	printf("******vncscr->greenMax: %d\n",vncscr->serverFormat.greenMax);
-	printf("******vncscr->blueMax: %d\n",vncscr->serverFormat.blueMax);
-	printf("******vncscr->redShift: %d\n",vncscr->serverFormat.redShift);
-	printf("******vncscr->greenShift: %d\n",vncscr->serverFormat.greenShift);
-	printf("******vncscr->blueShift: %d\n",vncscr->serverFormat.blueShift);
-
+	printf("%15s : %d\n", "depth", vncscr->serverFormat.depth);
+	printf("%15s : %d\n", "bitsPerPixel", vncscr->serverFormat.bitsPerPixel);
+	printf("%15s : %d\n", "redMax", vncscr->serverFormat.redMax);
+	printf("%15s : %d\n", "greenMax",vncscr->serverFormat.greenMax );
+	printf("%15s : %d\n", "blueMax", vncscr->serverFormat.blueMax);
+	printf("%15s : %d\n", "redShift", vncscr->serverFormat.redShift);
+	printf("%15s : %d\n", "greenShift", vncscr->serverFormat.greenShift);
+	printf("%15s : %d\n", "blueShift", vncscr->serverFormat.blueShift);
 
 	rfbInitServer(vncscr);
-
-	/* Mark as dirty since we haven't sent any updates at all yet. */
 	rfbMarkRectAsModified(vncscr, 0, 0, scrinfo.xres, scrinfo.yres);
+
 	printf("scrinfo.red.offset: %d\nscrinfo.green.offset: %d\nscrinfo.blue.offset:%d\n",
 			scrinfo.red.offset,scrinfo.green.offset,scrinfo.blue.offset);
 	printf("scrinfo.red.length: %d\nscrinfo.green.length: %d\nscrinfo.blue.length: %d\n",
 	 scrinfo.red.length, scrinfo.green.length, scrinfo.blue.length);
 
-	/* No idea. */
-	varblock.r_offset = scrinfo.red.offset + scrinfo.red.length - 5;
-	varblock.g_offset = scrinfo.green.offset + scrinfo.green.length - 5;
-	varblock.b_offset = scrinfo.blue.offset + scrinfo.blue.length - 5;
+	varblock.r_offset = scrinfo.red.offset + scrinfo.red.length - 8;
+	varblock.g_offset = scrinfo.green.offset + scrinfo.green.length - 8;
+	varblock.b_offset = scrinfo.blue.offset + scrinfo.blue.length - 8;
 	varblock.rfb_xres = scrinfo.yres;
-	varblock.rfb_maxy = scrinfo.xres - 1;
+	varblock.rfb_maxy = scrinfo.xres;
 
 	printf("varblock.r_offset: %d\nvarblock.g_offset: %d\nvarblock.b_offset:%d\nvarblock.rfb_xres: %d\nvarblock.rfb_maxy: %d\n", varblock.r_offset,varblock.g_offset, varblock.b_offset, varblock.rfb_xres, varblock.rfb_maxy);
 }
 
 
-//#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r)<<16)&0x00ffffff)|((((p>>g))<<8)&0x00ffffff)|(((p>>b)&0x00ffffff))
+#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r)<<16)&0x00ffffff)|((((p>>g))<<8)&0x00ffffff)|(((p>>b)&0x00ffffff))
 // -> this one is worse :( 
-#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r) << 16)&0x1f001f)|((((p>>g) << 8)&0x1f001f)<<5)|(((p>>b)&0x1f001f)<<10)
+// #define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r) << 16)&0x1f001f)|((((p>>g) << 8)&0x1f001f)<<5)|(((p>>b)&0x1f001f)<<10)
+// #define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r) << 16)&0xff1f001f)|((((p>>g) << 8)&0xff1f001f)<<5)|(((p>>b)&0xff1f001f)<<10)
+#define TRUE_VAL 0xff00ff
+#define GREEN_VAL 0x00ff00
 
 static void update_screen(void)
 {
@@ -478,7 +477,8 @@ static void update_screen(void)
 				*r = PIXEL_FB_TO_RFB(pixel,
 				  varblock.r_offset, varblock.g_offset, 
 				  varblock.b_offset);
-
+				// printf("%10s : %x\n", "r", *r);
+				*r = ((*r & GREEN_VAL) | (((*r & TRUE_VAL) <<16) | ((*r & TRUE_VAL) >> 16))); 
 				if (x < varblock.min_i)
 					varblock.min_i = x;
 				else
