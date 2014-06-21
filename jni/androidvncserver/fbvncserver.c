@@ -81,22 +81,12 @@ static void init_fb(void)
 	pixels = scrinfo.xres * scrinfo.yres;
 	bytespp = scrinfo.bits_per_pixel / 8;
 
-	// fprintf(stderr, "pixels * bytespp=%d\n", finfo.smem_len);
-
 	printf("Initializing frame buffer...\n");
+
 	init_private_fb (&fb);
 	fbmmap = private_fb(&fb);
-	// fbmmap = mmap(0, finfo.smem_len, PROT_READ | PROT_WRITE, MAP_SHARED, fbfd, 0);
+
 	printf("%15s : %p\n", "fbmmap addr", fbmmap);
-
-
-	// int y, x;
-	// for ( y = 0; y < 800; y++) { 
-		// for ( x = 0; x < 1280; x++) { 
-			// if (fbmmap[(800*y) + x] != 0)
-				// printf ("Current block looking at %x\n", fbmmap[(800*y) + x]);
-		// }
-	// }
 
 	printf("%15s : %x\n", "current color", fbmmap[(1280*600) + 640]);
 
@@ -471,8 +461,8 @@ static void update_screen(void)
 
 				/* XXX: Undo the checkered pattern to test the efficiency
 				 * gain using hextile encoding. */
-				if (pixel == 0x18e320e4 || pixel == 0x20e418e3)
-					pixel = 0x18e318e3;
+				// if (pixel == 0x18e320e4 || pixel == 0x20e418e3)
+					// pixel = 0x18e318e3;
 				// printf("Pixel: %x\n", pixel);
 				*r = PIXEL_FB_TO_RFB(pixel,
 				  varblock.r_offset, varblock.g_offset, 
@@ -723,9 +713,7 @@ int main(int argc, char **argv)
 	/* Implement our own event loop to detect changes in the framebuffer. */
 	while (1)
 	{
-		// while (vncscr->clientHead == NULL)
-		// 	rfbProcessEvents(vncscr, 100000);
-		rfbProcessEvents(vncscr, 100000);
+		rfbProcessEvents(vncscr, 2000);
 		update_screen();
 	}
 
