@@ -1,21 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include <unistd.h>
 #include <sys/mman.h>
 #include <sys/ioctl.h>
-
 #include <sys/stat.h>
 #include <sys/sysmacros.h>             /* For makedev() */
-
 #include <fcntl.h>
 #include <linux/fb.h>
 #include <linux/input.h>
-
 #include <assert.h>
 #include <errno.h>
-
 /* libvncserver */
 #include "rfb/rfb.h"
 #include "rfb/keysym.h"
@@ -31,7 +26,6 @@ static int fbfd = -1;
 static int kbdfd = -1;
 static int touchfd = -1;
 static unsigned int *fbmmap = MAP_FAILED;
-static char *charfbmmap = MAP_FAILED;
 static unsigned int *vncbuf;
 static unsigned int *fbbuf;
 
@@ -70,7 +64,14 @@ static void dump_fb(const struct fb* fb);
 static int get_fb_format(const struct fb *fb);
 static char* find_fb_format(const struct fb *fb);
 struct fb fb;
-
+struct fb_var_screeninfo vinfo;
+unsigned char *raw; 
+unsigned int bytespp;
+unsigned int raw_size;
+unsigned int raw_line_length;
+ssize_t read_size;
+int fb_temp;
+#define PROCESS_TIME 100000
 /*****************************************************************************/
 
 static void init_fb(void)
@@ -78,8 +79,8 @@ static void init_fb(void)
 	size_t pixels;
 	size_t bytespp;
 
-	pixels = scrinfo.xres * scrinfo.yres;
-	bytespp = scrinfo.bits_per_pixel / 8;
+	pixels = vinfo.xres * vinfo.yres;
+	bytespp = vinfo.bits_per_pixel / 8;
 
 	printf("Initializing frame buffer...\n");
 
@@ -99,13 +100,7 @@ static void init_fb(void)
 	printf("\n");
 }
 
-struct fb_var_screeninfo vinfo;
-unsigned char *raw; 
-unsigned int bytespp;
-unsigned int raw_size;
-unsigned int raw_line_length;
-ssize_t read_size;
-int fb_temp;
+
 
 static void init_private_fb(struct fb* fb) {
 	if ((fb_temp = open(FB_DEVICE, O_RDWR)) < 0 ) 
@@ -114,14 +109,14 @@ static void init_private_fb(struct fb* fb) {
     if (ioctl(fb_temp, FBIOGET_FSCREENINFO, &finfo) != 0)
 	{
 		printf("ioctl error from finfo\n");
-		close(fb_temp);
+		// close(fb_temp);
 		exit(EXIT_FAILURE);
 	}
 
 	if (ioctl(fb_temp, FBIOGET_VSCREENINFO, &vinfo) != 0 )
 	{
 		printf("ioctl error\n");
-		close(fb_temp);
+		// close(fb_temp);
 		exit(EXIT_FAILURE);
 	}
 
@@ -150,20 +145,14 @@ static void init_private_fb(struct fb* fb) {
 
 
 static void* private_fb( struct fb *fb){
-	// if (raw != NULL)
-	// 	free(raw);
-
-
     raw = malloc(raw_size);
     if (!raw) {
     	printf("raw: memory error\n");
-    	close(fb_temp);
+    	// close(fb_temp);
     	return NULL;
     }
 	unsigned int active_buffer_offset = 0;
  	int num_buffers = 0;
-
-    // display debug fb info
 
     lseek(fb_temp, active_buffer_offset, SEEK_SET);
     read_size = read(fb_temp, raw, raw_size);
@@ -173,13 +162,154 @@ static void* private_fb( struct fb *fb){
 
     if (read_size < 0 || (unsigned)read_size != raw_size) {
     	printf("read_size: read error\n");
-    	close(fb_temp);
+    	// close(fb_temp);
 	    free(raw);
 		exit(EXIT_FAILURE);
 	}
     fb->data = raw;
 
     return fb->data;
+}
+// freeze thing -> should close framebuffer and reopen it 
+
+
+static void init_fb_server(int argc, char **argv)
+{
+	printf("\nInitializing server...\n");
+
+	/* Allocate the VNC server buffer to be managed (not manipulated) by 
+	 * libvncserver. */
+	vncbuf = calloc(vinfo.xres * vinfo.yres, vinfo.bits_per_pixel / 2);
+	assert(vncbuf != NULL);
+
+	/* Allocate the comparison buffer for detecting drawing updates from frame
+	 * to frame. */
+	fbbuf = calloc(vinfo.xres * vinfo.yres, vinfo.bits_per_pixel / 2);
+	assert(fbbuf != NULL);
+
+	/* TODO: This assumes scrinfo.bits_per_pixel is 16. */
+	/* A pixel is one dot on the screen. The number of bytes in a pixel will depend 
+	on the number of samples in that pixel and the number of bits in each sample.
+	 A sample represents one of the primary colors in a color model. 
+	 The RGB color model uses red, green, and blue samples respectively. 
+	 Suppose you wanted to use 16-bit RGB color: 
+	 You would have three samples per pixel (one for each primary color), 
+	 five bits per sample (the quotient of 16 RGB bits divided by three samples),
+	 and two bytes per pixel (the smallest multiple of eight bits in which the 16-bit pixel will fit). 
+	 If you wanted 32-bit RGB color, you would have three samples per pixel again, 
+	 eight bits per sample (since that's how 32-bit color is defined), 
+	 and four bytes per pixel (the smallest multiple of eight bits in which the 32-bit pixel will fit.*/
+
+	vncscr = rfbGetScreen(&argc, argv, vinfo.xres, vinfo.yres, 8, 4, 4);
+	assert(vncscr != NULL);
+
+	/*
+					int bitsPerSample,int samplesPerPixel, int bytesPerPixel	 
+	16 bit Gray     2 bytes per pixel 1 sample  per pixel 16 bits per sample
+	24 bit RGB      3 bytes per pixel 3 samples per pixel  8 bits per sample
+	48 bit RGB      6 bytes per pixel 3 samples per pixel 16 bits per sample
+	from http://stuff.mit.edu/afs/sipb/project/scanner/bin/html/vuesc13.htm
+	*/
+
+	vncscr->desktopName = "oPsai";
+	vncscr->frameBuffer = (char *)vncbuf;
+	vncscr->alwaysShared = TRUE;
+	vncscr->httpDir = NULL;
+	vncscr->port = VNC_PORT;
+
+	vncscr->kbdAddEvent = keyevent;
+	vncscr->ptrAddEvent = ptrevent;
+	vncscr->serverFormat.trueColour = TRUE; 
+	vncscr->depth = vncscr->serverFormat.depth = 24;
+
+	printf("%15s : %d\n", "depth", vncscr->serverFormat.depth);
+	printf("%15s : %d\n", "bitsPerPixel", vncscr->serverFormat.bitsPerPixel);
+	printf("%15s : %d\n", "redMax", vncscr->serverFormat.redMax);
+	printf("%15s : %d\n", "greenMax",vncscr->serverFormat.greenMax );
+	printf("%15s : %d\n", "blueMax", vncscr->serverFormat.blueMax);
+	printf("%15s : %d\n", "redShift", vncscr->serverFormat.redShift);
+	printf("%15s : %d\n", "greenShift", vncscr->serverFormat.greenShift);
+	printf("%15s : %d\n", "blueShift", vncscr->serverFormat.blueShift);
+
+	rfbInitServer(vncscr);
+	rfbMarkRectAsModified(vncscr, 0, 0, vinfo.xres, vinfo.yres);
+
+	varblock.r_offset = vinfo.red.offset + vinfo.red.length - 8;
+	varblock.g_offset = vinfo.green.offset + vinfo.green.length - 8;
+	varblock.b_offset = vinfo.blue.offset + vinfo.blue.length - 8;
+	varblock.rfb_xres = vinfo.yres;
+	varblock.rfb_maxy = vinfo.xres;
+}
+
+/* Eureka magic ;> */
+#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r)<<16)&0x00ffffff)|((((p>>g))<<8)&0x00ffffff)|(((p>>b)&0x00ffffff))
+#define TRUE_VAL 0xff00ff
+#define GREEN_VAL 0x00ff00
+
+static void update_screen(void)
+{
+	// printf("updateing\n");
+	unsigned int *f, *c, *r;
+	int x, y;
+
+	varblock.min_i = varblock.min_j = 9999;
+	varblock.max_i = varblock.max_j = -1;
+
+	free(fbmmap);
+	fbmmap = private_fb(&fb);
+
+	f = (unsigned int *)fbmmap;        /* -> framebuffer         */
+	c = (unsigned int *)fbbuf;         /* -> compare framebuffer */
+	r = (unsigned int *)vncbuf;        /* -> remote framebuffer  */
+	// printf("f: %p   c: %p   r: %p\n", f,c,r);
+
+	for (y = 0; y < vinfo.yres; y++)
+	{
+		/* faster ? increase compression level -_- */
+		for (x = 0; x < vinfo.xres; x ++)
+		{
+			unsigned int pixel = *f;
+
+			if (pixel != *c)
+			{
+				*c = pixel;
+				*r = PIXEL_FB_TO_RFB(pixel, varblock.r_offset, varblock.g_offset, varblock.b_offset);
+				*r = ((*r & GREEN_VAL) | (((*r & TRUE_VAL) <<16) | ((*r & TRUE_VAL) >> 16))); 
+				if (x < varblock.min_i)
+					varblock.min_i = x;
+				else
+				{
+					if (x > varblock.max_i)
+						varblock.max_i = x;
+
+					if (y > varblock.max_j)
+						varblock.max_j = y;
+					else if (y < varblock.min_j)
+						varblock.min_j = y;
+				}
+			}
+
+			f++, c++;
+			r++;
+		}
+	}
+
+	if (varblock.min_i < 9999)
+	{
+		if (varblock.max_i < 0)
+			varblock.max_i = varblock.min_i;
+
+		if (varblock.max_j < 0)
+			varblock.max_j = varblock.min_j;
+
+		/*fprintf(stderr, "Dirty page: %dx%d+%d+%d...\n",
+		  (varblock.max_i+2) - varblock.min_i, (varblock.max_j+1) - varblock.min_j,
+		  varblock.min_i, varblock.min_j);*/
+
+		rfbMarkRectAsModified(vncscr, varblock.min_i, varblock.min_j,varblock.max_i + 2, varblock.max_j + 1);
+
+		rfbProcessEvents(vncscr, PROCESS_TIME);
+	}
 }
 
 static void dump_fb(const struct fb* fb)
@@ -200,7 +330,7 @@ static void dump_fb(const struct fb* fb)
 }
 
 static char* find_fb_format(const struct fb *fb) {
-	int x;
+	int x; // for future use:) 
 	// x = get_fb_format(fb);
 	char *c;
 	// switch(x) {
@@ -267,6 +397,8 @@ static int get_fb_format(const struct fb *fb)
     return FB_FORMAT_UNKNOWN;
 }
 
+
+/*****************************************************************************/
 static void cleanup_fb(void)
 {
 	if(fbfd != -1)
@@ -295,11 +427,11 @@ static void cleanup_kbd()
 static void init_touch()
 {
     struct input_absinfo info;
-        if((touchfd = open(TOUCH_DEVICE, O_RDWR)) == -1)
-        {
-                printf("cannot open touch device %s\n", TOUCH_DEVICE);
-                exit(EXIT_FAILURE);
-        }
+    if((touchfd = open(TOUCH_DEVICE, O_RDWR)) == -1)
+    {
+        printf("cannot open touch device %s\n", TOUCH_DEVICE);
+        exit(EXIT_FAILURE);
+    }
     // Get the Range of X and Y
     if(ioctl(touchfd, EVIOCGABS(ABS_X), &info)) {
         printf("cannot get ABS_X info, %s\n", strerror(errno));
@@ -323,195 +455,6 @@ static void cleanup_touch()
 		close(touchfd);
 	}
 }
-
-/*****************************************************************************/
-
-static void init_fb_server(int argc, char **argv)
-{
-	printf("\nInitializing server...\n");
-
-	int p;
-	p = open(FB_DEVICE, O_RDWR);
-	ioctl(p, FBIOGET_VSCREENINFO, &scrinfo);
-	/* Allocate the VNC server buffer to be managed (not manipulated) by 
-	 * libvncserver. */
-	vncbuf = calloc(scrinfo.xres * scrinfo.yres, scrinfo.bits_per_pixel / 2);
-	assert(vncbuf != NULL);
-
-	/* Allocate the comparison buffer for detecting drawing updates from frame
-	 * to frame. */
-	fbbuf = calloc(scrinfo.xres * scrinfo.yres, scrinfo.bits_per_pixel / 2);
-	assert(fbbuf != NULL);
-
-	// printf("*************** scrinfo.bits_per_pixel: %d \n", scrinfo.bits_per_pixel);
-	/* TODO: This assumes scrinfo.bits_per_pixel is 16. */
-	/* A pixel is one dot on the screen. The number of bytes in a pixel will depend 
-	on the number of samples in that pixel and the number of bits in each sample.
-	 A sample represents one of the primary colors in a color model. 
-	 The RGB color model uses red, green, and blue samples respectively. 
-	 Suppose you wanted to use 16-bit RGB color: 
-	 You would have three samples per pixel (one for each primary color), 
-	 five bits per sample (the quotient of 16 RGB bits divided by three samples),
-	 and two bytes per pixel (the smallest multiple of eight bits in which the 16-bit pixel will fit). 
-	 If you wanted 32-bit RGB color, you would have three samples per pixel again, 
-	 eight bits per sample (since that's how 32-bit color is defined), 
-	 and four bytes per pixel (the smallest multiple of eight bits in which the 32-bit pixel will fit.*/
-
-	vncscr = rfbGetScreen(&argc, argv, scrinfo.xres, scrinfo.yres, 8, 4, 4);
-	assert(vncscr != NULL);
-	/*
-		int bitsPerSample,int samplesPerPixel, int bytesPerPixel	 
-
-	 1 bit B/W      1 bit   per pixel 1 sample  per pixel  1 bit  per sample
-	 8 bit Gray     1 byte  per pixel 1 sample  per pixel  8 bits per sample
-	16 bit Gray     2 bytes per pixel 1 sample  per pixel 16 bits per sample
-	24 bit RGB      3 bytes per pixel 3 samples per pixel  8 bits per sample
-	48 bit RGB      6 bytes per pixel 3 samples per pixel 16 bits per sample
-	64 bit RGBI     8 bytes per pixel 4 samples per pixel 16 bits per sample
-	16 bit Infrared 2 bytes per pixel 1 sample  per pixel 16 bits per sample
-	from http://stuff.mit.edu/afs/sipb/project/scanner/bin/html/vuesc13.htm
-	*/
-
-	vncscr->desktopName = "oPsai";
-	vncscr->frameBuffer = (char *)vncbuf;
-	vncscr->alwaysShared = TRUE;
-	vncscr->httpDir = NULL;
-	vncscr->port = VNC_PORT;
-
-	vncscr->kbdAddEvent = keyevent;
-	vncscr->ptrAddEvent = ptrevent;
-	vncscr->serverFormat.trueColour = TRUE; 
-	vncscr->depth = vncscr->serverFormat.depth = 24;
-	//vncscr->serverFormat.bitsPerPixel = scrinfo.bitsPerPixel;
-/*
-uint8_t 	bitsPerPixel
-uint8_t 	depth
-uint8_t 	bigEndian
-uint8_t 	trueColour
-uint16_t 	redMax
-uint16_t 	greenMax
-uint16_t 	blueMax
-uint8_t 	redShift
-uint8_t 	greenShift
-uint8_t 	blueShift
-uint8_t 	pad1
-uint16_t 	pad2
-
-*/
-	printf("%15s : %d\n", "depth", vncscr->serverFormat.depth);
-	printf("%15s : %d\n", "bitsPerPixel", vncscr->serverFormat.bitsPerPixel);
-	printf("%15s : %d\n", "redMax", vncscr->serverFormat.redMax);
-	printf("%15s : %d\n", "greenMax",vncscr->serverFormat.greenMax );
-	printf("%15s : %d\n", "blueMax", vncscr->serverFormat.blueMax);
-	printf("%15s : %d\n", "redShift", vncscr->serverFormat.redShift);
-	printf("%15s : %d\n", "greenShift", vncscr->serverFormat.greenShift);
-	printf("%15s : %d\n", "blueShift", vncscr->serverFormat.blueShift);
-
-	rfbInitServer(vncscr);
-	rfbMarkRectAsModified(vncscr, 0, 0, scrinfo.xres, scrinfo.yres);
-
-	printf("scrinfo.red.offset: %d\nscrinfo.green.offset: %d\nscrinfo.blue.offset:%d\n",
-			scrinfo.red.offset,scrinfo.green.offset,scrinfo.blue.offset);
-	printf("scrinfo.red.length: %d\nscrinfo.green.length: %d\nscrinfo.blue.length: %d\n",
-	 scrinfo.red.length, scrinfo.green.length, scrinfo.blue.length);
-
-	varblock.r_offset = scrinfo.red.offset + scrinfo.red.length - 8;
-	varblock.g_offset = scrinfo.green.offset + scrinfo.green.length - 8;
-	varblock.b_offset = scrinfo.blue.offset + scrinfo.blue.length - 8;
-	varblock.rfb_xres = scrinfo.yres;
-	varblock.rfb_maxy = scrinfo.xres;
-
-	printf("varblock.r_offset: %d\nvarblock.g_offset: %d\nvarblock.b_offset:%d\nvarblock.rfb_xres: %d\nvarblock.rfb_maxy: %d\n", varblock.r_offset,varblock.g_offset, varblock.b_offset, varblock.rfb_xres, varblock.rfb_maxy);
-}
-
-
-#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r)<<16)&0x00ffffff)|((((p>>g))<<8)&0x00ffffff)|(((p>>b)&0x00ffffff))
-// -> this one is worse :( 
-// #define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r) << 16)&0x1f001f)|((((p>>g) << 8)&0x1f001f)<<5)|(((p>>b)&0x1f001f)<<10)
-// #define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r) << 16)&0xff1f001f)|((((p>>g) << 8)&0xff1f001f)<<5)|(((p>>b)&0xff1f001f)<<10)
-#define TRUE_VAL 0xff00ff
-#define GREEN_VAL 0x00ff00
-
-static void update_screen(void)
-{
-	unsigned int *f, *c, *r;
-	int x, y;
-
-	varblock.min_i = varblock.min_j = 9999;
-	varblock.max_i = varblock.max_j = -1;
-
-	free(fbmmap);
-	fbmmap = private_fb(&fb);
-
-	f = (unsigned int *)fbmmap;        /* -> framebuffer         */
-	c = (unsigned int *)fbbuf;         /* -> compare framebuffer */
-	r = (unsigned int *)vncbuf;        /* -> remote framebuffer  */
-	// printf("f: %x   c: %x   r: %x\n", *f,*c,*r);
-
-	for (y = 0; y < scrinfo.yres; y++)
-	{
-		/* faster ? increase compression level -_- */
-		for (x = 0; x < scrinfo.xres; x ++)
-		{
-			unsigned int pixel = *f;
-
-			if (pixel != *c)
-			{
-				*c = pixel;
-
-				/* XXX: Undo the checkered pattern to test the efficiency
-				 * gain using hextile encoding. */
-				// if (pixel == 0x18e320e4 || pixel == 0x20e418e3)
-					// pixel = 0x18e318e3;
-				// printf("Pixel: %x\n", pixel);
-				*r = PIXEL_FB_TO_RFB(pixel,
-				  varblock.r_offset, varblock.g_offset, 
-				  varblock.b_offset);
-				// printf("%10s : %x\n", "r", *r);
-				*r = ((*r & GREEN_VAL) | (((*r & TRUE_VAL) <<16) | ((*r & TRUE_VAL) >> 16))); 
-				if (x < varblock.min_i)
-					varblock.min_i = x;
-				else
-				{
-					if (x > varblock.max_i)
-						varblock.max_i = x;
-
-					if (y > varblock.max_j)
-						varblock.max_j = y;
-					else if (y < varblock.min_j)
-						varblock.min_j = y;
-				}
-			}
-
-			f++, c++;
-			r++;
-		}
-	}
-
-	if (varblock.min_i < 9999)
-	{
-		if (varblock.max_i < 0)
-			varblock.max_i = varblock.min_i;
-
-		if (varblock.max_j < 0)
-			varblock.max_j = varblock.min_j;
-//printf("Pixel: %d, R: %d, G: %d, B: %d", *f,
-				  // varblock.r_offset, varblock.g_offset, 
-				  // varblock.b_offset);
-
-		/*fprintf(stderr, "Dirty page: %dx%d+%d+%d...\n",
-		  (varblock.max_i+2) - varblock.min_i, (varblock.max_j+1) - varblock.min_j,
-		  varblock.min_i, varblock.min_j);*/
-
-		rfbMarkRectAsModified(vncscr, varblock.min_i, varblock.min_j,
-		  varblock.max_i + 2, varblock.max_j + 1);
-
-		rfbProcessEvents(vncscr, 10000);
-	}
-}
-
-static 
-
 
 /*****************************************************************************/
 void injectKeyEvent(uint16_t code, uint16_t value)
@@ -608,8 +551,8 @@ void injectTouchEvent(int down, int x, int y)
     struct input_event ev;
     
     // Calculate the final x and y
-    x = xmin + (x * (xmax - xmin)) / (scrinfo.xres);
-    y = ymin + (y * (ymax - ymin)) / (scrinfo.yres);
+    x = xmin + (x * (xmax - xmin)) / (vinfo.xres);
+    y = ymin + (y * (ymax - ymin)) / (vinfo.yres);
     
     memset(&ev, 0, sizeof(ev));
 
@@ -678,15 +621,11 @@ a press and release of button 5.
 int main(int argc, char **argv)
 {
 	printf("\n\n======= oPsai VNCServer Daemon initiating =======\n\n");
-	if(argc > 1)
-	{
+	if(argc > 1){
 		int i=1;
-		while(i < argc)
-		{
-			if(*argv[i] == '-')
-			{
-				switch(*(argv[i] + 1))
-				{
+		while(i < argc){
+			if(*argv[i] == '-'){
+				switch(*(argv[i] + 1)){
 					case 'k':
 						i++;
 						strcpy(KBD_DEVICE, argv[i]);
@@ -710,10 +649,11 @@ int main(int argc, char **argv)
 
 	init_fb_server(argc, argv);
 
-	/* Implement our own event loop to detect changes in the framebuffer. */
 	while (1)
 	{
-		rfbProcessEvents(vncscr, 2000);
+		while (vncscr->clientHead == NULL)
+ 			rfbProcessEvents(vncscr, 100000);
+		rfbProcessEvents(vncscr, PROCESS_TIME);
 		update_screen();
 	}
 

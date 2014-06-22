@@ -1,6 +1,6 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_MODULE:= androidvncserver
+LOCAL_MODULE:= opsaivncserver
 
 LOCAL_SRC_FILES:= \
 	LibVNCServer-0.9.7/libvncserver/main.c \
