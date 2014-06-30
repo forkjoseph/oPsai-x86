@@ -61,12 +61,31 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/endian.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/endian.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/endian.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/fb.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/input.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/byteorder.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/little_endian.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/swab.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/generic.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/net/if.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/if.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -79,21 +98,6 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/socket.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/socket.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/byteorder.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/little_endian.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/swab.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/generic.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
@@ -223,6 +227,20 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/endian.h:
 
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
+
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/fcntl.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/fcntl.h:
@@ -234,6 +252,30 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/fb.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/input.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/byteorder.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/little_endian.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/swab.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/generic.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/net/if.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/if.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h:
 
@@ -258,36 +300,6 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/socket.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/socket.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/byteorder.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/little_endian.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/swab.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/generic.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h:
 

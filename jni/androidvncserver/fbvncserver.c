@@ -6,9 +6,14 @@
 #include <sys/ioctl.h>
 #include <sys/stat.h>
 #include <sys/sysmacros.h>             /* For makedev() */
+#include <sys/types.h>
+#include <sys/socket.h>
 #include <fcntl.h>
 #include <linux/fb.h>
 #include <linux/input.h>
+#include <netinet/in.h>
+#include <net/if.h>
+
 #include <assert.h>
 #include <errno.h>
 /* libvncserver */
@@ -88,9 +93,19 @@ static void init_fb(void)
 	fbmmap = private_fb(&fb);
 
 	printf("%15s : %p\n", "fbmmap addr", fbmmap);
+	printf("%15s : %x\n", "fbmmap 1s color", fbmmap[0]);
 
 	printf("%15s : %x\n", "current color", fbmmap[(1280*600) + 640]);
 
+ //    fbmmap = mmap (NULL, raw_size, PROT_READ | PROT_WRITE, MAP_SHARED , fb_temp,0);
+ //    int i,j;
+	// for (i=0; i < 400 ; i++ ) {
+	// 	for(j = 0; j < 1280; j++){
+	// 		*(fbmmap+(i*1280) + j) = 0xff0000ff;
+	// 	}
+	// }
+	// printf("%15s : %p\n", "fbmmap addr", fbmmap);
+	// printf("%15s : %x\n", "current color", fbmmap[0]);
 
 	if (fbmmap == MAP_FAILED)
 	{
@@ -142,8 +157,6 @@ static void init_private_fb(struct fb* fb) {
     printf("%15s : %u\n", "raw size", raw_size);
 }
 
-
-
 static void* private_fb( struct fb *fb){
     raw = malloc(raw_size);
     if (!raw) {
@@ -154,9 +167,8 @@ static void* private_fb( struct fb *fb){
 	unsigned int active_buffer_offset = 0;
  	int num_buffers = 0;
 
-    lseek(fb_temp, active_buffer_offset, SEEK_SET);
-    read_size = read(fb_temp, raw, raw_size);
-  
+    lseek(fb_temp, 0, SEEK_SET);
+    read_size = read(fb_temp, raw, raw_size); // this makes so slow
   	if (read_size < 0)
   		printf("%15s : %d\n", "buffer size", read_size);
 
@@ -245,6 +257,7 @@ static void init_fb_server(int argc, char **argv)
 #define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r)<<16)&0x00ffffff)|((((p>>g))<<8)&0x00ffffff)|(((p>>b)&0x00ffffff))
 #define TRUE_VAL 0xff00ff
 #define GREEN_VAL 0x00ff00
+#include <sys/time.h>
 
 static void update_screen(void)
 {
@@ -255,8 +268,15 @@ static void update_screen(void)
 	varblock.min_i = varblock.min_j = 9999;
 	varblock.max_i = varblock.max_j = -1;
 
+	struct timeval stop, start;
+	gettimeofday(&start, NULL);
+
+
 	free(fbmmap);
-	fbmmap = private_fb(&fb);
+	fbmmap = private_fb(&fb); // apprx 0.1s 
+
+	gettimeofday(&stop, NULL);
+	// printf("private_fb time: %lu\n", stop.tv_usec - start.tv_usec); 
 
 	f = (unsigned int *)fbmmap;        /* -> framebuffer         */
 	c = (unsigned int *)fbbuf;         /* -> compare framebuffer */
@@ -618,9 +638,13 @@ a press and release of button 5.
 	} 
 }
 
+
+int pid;
 int main(int argc, char **argv)
 {
-	printf("\n\n======= oPsai VNCServer Daemon initiating =======\n\n");
+	printf("\n======= oPsai VNCServer Daemon initiating =======\n");
+	pid = getpid();
+	printf("%5s: %d\n", "PID", pid);
 	if(argc > 1){
 		int i=1;
 		while(i < argc){
