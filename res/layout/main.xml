@@ -14,5 +14,22 @@
         android:layout_marginTop="50dp"
         android:text="Run Server" />
 
+    <Button
+        android:id="@+id/killserver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/runserver"
+        android:layout_below="@+id/runserver"
+        android:layout_marginTop="35dp"
+        android:text="Stop Server" />
+
+    <TextView
+        android:id="@+id/iptextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </RelativeLayout>
 
