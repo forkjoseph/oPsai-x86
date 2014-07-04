@@ -2,6 +2,9 @@ package edu.gatech.opsai;
 
 import edu.gatech.opsai.ServerManager;
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -19,12 +22,15 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.media.*;
 
 public class MainActivity extends Activity
 {
 	private Button rButton, kButton;
 	private TextView ipTV;
 	private ServerManager s;
+	private NotificationManager notificationManager;
+
 
 	@Override
     public void onCreate(Bundle savedInstanceState)
@@ -48,6 +54,7 @@ public class MainActivity extends Activity
             		s.killServer();
             	}
             	s.startServer();
+            	statusNotify(true);
             }
         });
         
@@ -56,11 +63,13 @@ public class MainActivity extends Activity
             	if (s.isServerRunning())  {
             		Toast.makeText(getApplicationContext(), "Server is currently running.\nKilling the server.", Toast.LENGTH_LONG).show();
             		s.killServer();
+                	statusNotify(false);
             	} else {
             		Toast.makeText(getApplicationContext(), "Server is not currently running.\nNothing to kill", Toast.LENGTH_LONG).show();
             	}
             }
         });
+        
         WifiManager wifiMgr = (WifiManager) getSystemService(WIFI_SERVICE);
         WifiInfo wifiInfo = wifiMgr.getConnectionInfo();
         int ip = wifiInfo.getIpAddress();
@@ -69,6 +78,21 @@ public class MainActivity extends Activity
         ipTV.setText("Address: " + ipAddress + "\nType \"vncviewer " + ipAddress + ":5901 -compresslevel 9 -viewonly\"");
     }
     
+	void statusNotify(boolean isrunning) {
+        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        Intent intent = new Intent(this, MainActivity.class);
+        PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+        if (isrunning){
+	        Notification noti = new Notification.Builder(this).setContentTitle("oPsai VNC server is running")
+	        		.setContentIntent(pIntent).setAutoCancel(false).build();
+	//            .setContentText("Subject")
+	        noti.flags |= Notification.FLAG_ONGOING_EVENT;
+	        notificationManager.notify(123, noti);
+        } else {
+	        notificationManager.cancel(123);
+        }
+	}
 
     void doBindService() {
 		bindService(new Intent(this, ServerManager.class), mConnection, Context.BIND_AUTO_CREATE);
@@ -82,7 +106,7 @@ public class MainActivity extends Activity
 			s = null;
 		}
 	};
-    
+	
     public void D(String x) {
     	final String LOG_TAG = "OPSAI - MainActivity";
     	Log.d(LOG_TAG, x);
