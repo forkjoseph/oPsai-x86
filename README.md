@@ -19,3 +19,5 @@ Virtual Networking Protocol (VNC) and Remote FrameBuffer (RFB) are developed by 
 (formerly of Olivetti Research Ltd / AT&T Labs Cambridge).
 -> http://www.realvnc.com/docs/rfbproto.pdf
 oPsai is built on rfb version 3.8
+
+PortAudio is developed by http://www.portaudio.com under MIT license. 
