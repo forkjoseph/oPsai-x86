@@ -48,7 +48,6 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../screenMethods \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7/libvncserver \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7 \
-	$(LOCAL_PATH)/LibVNCServer-0.9.7/common \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7/libvncserver \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7/rfb \
 	$(LOCAL_PATH)/../libpng \

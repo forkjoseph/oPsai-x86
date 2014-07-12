@@ -31,7 +31,7 @@ public class ServerManager extends Service {
 	private static PowerManager.WakeLock wakeLock = null;
 
 	boolean serverOn = false;
-	public static String SOCKET_ADDRESS = "org.onaips.vnc.gui";
+//	public static String SOCKET_ADDRESS = "org.onaips.vnc.gui";
 	SocketListener serverConnection = null;
 
 	private String rHost = null;

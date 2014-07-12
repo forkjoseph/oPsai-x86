@@ -1,0 +1,4 @@
+#!/system/bin/
+
+chmod 777 /system/lib/libtinyalsa.so
+echo HELLO

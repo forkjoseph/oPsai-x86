@@ -14,17 +14,21 @@
 #include <netinet/in.h>
 #include <net/if.h>
 
+/* Multithreading */
+#include <pthread.h>
+
 #include <assert.h>
 #include <errno.h>
+
 /* libvncserver */
 #include "rfb/rfb.h"
 #include "rfb/keysym.h"
 
+/* framebuffer and input */
 #include "fb.h" 
+#include "input.h"
 
 #define FB_DEVICE "/dev/graphics/fb0"
-static char KBD_DEVICE[256] = "/dev/input/event3";
-static char TOUCH_DEVICE[256] = "/dev/input/event1";
 static struct fb_var_screeninfo scrinfo;
 static struct fb_fix_screeninfo finfo;
 static int fbfd = -1;
@@ -169,8 +173,8 @@ static void* private_fb( struct fb *fb){
 
     lseek(fb_temp, 0, SEEK_SET);
     read_size = read(fb_temp, raw, raw_size); // this makes so slow
-  	if (read_size < 0)
-  		printf("%15s : %d\n", "buffer size", read_size);
+//  	if (read_size < 0)
+//  		printf("%15s : %d\n", "buffer size", read_size);
 
     if (read_size < 0 || (unsigned)read_size != raw_size) {
     	printf("read_size: read error\n");
@@ -199,7 +203,6 @@ static void init_fb_server(int argc, char **argv)
 	fbbuf = calloc(vinfo.xres * vinfo.yres, vinfo.bits_per_pixel / 2);
 	assert(fbbuf != NULL);
 
-	/* TODO: This assumes scrinfo.bits_per_pixel is 16. */
 	/* A pixel is one dot on the screen. The number of bytes in a pixel will depend 
 	on the number of samples in that pixel and the number of bits in each sample.
 	 A sample represents one of the primary colors in a color model. 
@@ -229,10 +232,12 @@ static void init_fb_server(int argc, char **argv)
 	vncscr->httpDir = NULL;
 	vncscr->port = VNC_PORT;
 
-	vncscr->kbdAddEvent = keyevent;
-	vncscr->ptrAddEvent = ptrevent;
+	vncscr->kbdAddEvent = keyEvent;
+	vncscr->ptrAddEvent = ptrEvent;
 	vncscr->serverFormat.trueColour = TRUE; 
 	vncscr->depth = vncscr->serverFormat.depth = 24;
+	vncscr->alwaysShared = TRUE;
+	vncscr->handleEventsEagerly = TRUE;
 
 	printf("%15s : %d\n", "depth", vncscr->serverFormat.depth);
 	printf("%15s : %d\n", "bitsPerPixel", vncscr->serverFormat.bitsPerPixel);
@@ -427,249 +432,18 @@ static void cleanup_fb(void)
 	}
 }
 
-static void init_kbd()
-{
-	if((kbdfd = open(KBD_DEVICE, O_RDWR)) == -1)
-	{
-		printf("cannot open kbd device %s\n", KBD_DEVICE);
-		exit(EXIT_FAILURE);
-	}
-}
-
-static void cleanup_kbd()
-{
-	if(kbdfd != -1)
-	{
-		close(kbdfd);
-	}
-}
-
-static void init_touch()
-{
-    struct input_absinfo info;
-    if((touchfd = open(TOUCH_DEVICE, O_RDWR)) == -1)
-    {
-        printf("cannot open touch device %s\n", TOUCH_DEVICE);
-        exit(EXIT_FAILURE);
-    }
-    // Get the Range of X and Y
-    if(ioctl(touchfd, EVIOCGABS(ABS_X), &info)) {
-        printf("cannot get ABS_X info, %s\n", strerror(errno));
-        exit(EXIT_FAILURE);
-    }
-    xmin = info.minimum;
-    xmax = info.maximum;
-    if(ioctl(touchfd, EVIOCGABS(ABS_Y), &info)) {
-        printf("cannot get ABS_Y, %s\n", strerror(errno));
-        exit(EXIT_FAILURE);
-    }
-    ymin = info.minimum;
-    ymax = info.maximum;
-
-}
-
-static void cleanup_touch()
-{
-	if(touchfd != -1)
-	{
-		close(touchfd);
-	}
-}
-
-/*****************************************************************************/
-void injectKeyEvent(uint16_t code, uint16_t value)
-{
-    struct input_event ev;
-    memset(&ev, 0, sizeof(ev));
-    gettimeofday(&ev.time,0);
-    ev.type = EV_KEY;
-    ev.code = code;
-    ev.value = value;
-    if(write(kbdfd, &ev, sizeof(ev)) < 0)
-    {
-        printf("write event failed, %s\n", strerror(errno));
-    }
-
-    printf("injectKey (%d, %d)\n", code , value);    
-}
-
-static int keysym2scancode(rfbBool down, rfbKeySym key, rfbClientPtr cl)
-{
-    int scancode = 0;
-
-    int code = (int)key;
-    if (code>='0' && code<='9') {
-        scancode = (code & 0xF) - 1;
-        if (scancode<0) scancode += 10;
-        scancode += KEY_1;
-    } else if (code>=0xFF50 && code<=0xFF58) {
-        static const uint16_t map[] =
-             {  KEY_HOME, KEY_LEFT, KEY_UP, KEY_RIGHT, KEY_DOWN,
-                KEY_SOFT1, KEY_SOFT2, KEY_END, 0 };
-        scancode = map[code & 0xF];
-    } else if (code>=0xFFE1 && code<=0xFFEE) {
-        static const uint16_t map[] =
-             {  KEY_LEFTSHIFT, KEY_LEFTSHIFT,
-                KEY_COMPOSE, KEY_COMPOSE,
-                KEY_LEFTSHIFT, KEY_LEFTSHIFT,
-                0,0,
-                KEY_LEFTALT, KEY_RIGHTALT,
-                0, 0, 0, 0 };
-        scancode = map[code & 0xF];
-    } else if ((code>='A' && code<='Z') || (code>='a' && code<='z')) {
-        static const uint16_t map[] = {
-                KEY_A, KEY_B, KEY_C, KEY_D, KEY_E,
-                KEY_F, KEY_G, KEY_H, KEY_I, KEY_J,
-                KEY_K, KEY_L, KEY_M, KEY_N, KEY_O,
-                KEY_P, KEY_Q, KEY_R, KEY_S, KEY_T,
-                KEY_U, KEY_V, KEY_W, KEY_X, KEY_Y, KEY_Z };
-        scancode = map[(code & 0x5F) - 'A'];
-    } else {
-        switch (code) {
-            case 0x0003:    scancode = KEY_CENTER;      break;
-            case 0x0020:    scancode = KEY_SPACE;       break;
-            case 0x0023:    scancode = KEY_SHARP;       break;
-            case 0x0033:    scancode = KEY_SHARP;       break;
-            case 0x002C:    scancode = KEY_COMMA;       break;
-            case 0x003C:    scancode = KEY_COMMA;       break;
-            case 0x002E:    scancode = KEY_DOT;         break;
-            case 0x003E:    scancode = KEY_DOT;         break;
-            case 0x002F:    scancode = KEY_SLASH;       break;
-            case 0x003F:    scancode = KEY_SLASH;       break;
-            case 0x0032:    scancode = KEY_EMAIL;       break;
-            case 0x0040:    scancode = KEY_EMAIL;       break;
-            case 0xFF08:    scancode = KEY_BACKSPACE;   break;
-            case 0xFF1B:    scancode = KEY_BACK;        break;
-            case 0xFF09:    scancode = KEY_TAB;         break;
-            case 0xFF0D:    scancode = KEY_ENTER;       break;
-            case 0x002A:    scancode = KEY_STAR;        break;
-            case 0xFFBE:    scancode = KEY_F1;        break; // F1
-            case 0xFFBF:    scancode = KEY_F2;         break; // F2
-            case 0xFFC0:    scancode = KEY_F3;        break; // F3
-            case 0xFFC5:    scancode = KEY_F4;       break; // F8
-            case 0xFFC8:    rfbShutdownServer(cl->screen,TRUE);       break; // F11            
-        }
-    }
-
-    return scancode;
-}
-
-static void keyevent(rfbBool down, rfbKeySym key, rfbClientPtr cl)
-{
-	int scancode;
-
-	printf("Got keysym: %04x (down=%d)\n", (unsigned int)key, (int)down);
-
-	if ((scancode = keysym2scancode(down, key, cl)))
-	{
-		injectKeyEvent(scancode, down);
-	}
-}
-
-void injectTouchEvent(int down, int x, int y)
-{
-    struct input_event ev;
-    
-    // Calculate the final x and y
-    x = xmin + (x * (xmax - xmin)) / (vinfo.xres);
-    y = ymin + (y * (ymax - ymin)) / (vinfo.yres);
-    
-    memset(&ev, 0, sizeof(ev));
-
-    // Then send a BTN_TOUCH
-    gettimeofday(&ev.time,0);
-    ev.type = EV_KEY;
-    ev.code = BTN_TOUCH;
-    ev.value = down;
-    if(write(touchfd, &ev, sizeof(ev)) < 0)
-    {
-        printf("write event failed, %s\n", strerror(errno));
-    }
-
-    // Then send the X
-    gettimeofday(&ev.time,0);
-    ev.type = EV_ABS;
-    ev.code = ABS_X;
-    ev.value = x;
-    if(write(touchfd, &ev, sizeof(ev)) < 0)
-    {
-        printf("write event failed, %s\n", strerror(errno));
-    }
-
-    // Then send the Y
-    gettimeofday(&ev.time,0);
-    ev.type = EV_ABS;
-    ev.code = ABS_Y;
-    ev.value = y;
-    if(write(touchfd, &ev, sizeof(ev)) < 0)
-    {
-        printf("write event failed, %s\n", strerror(errno));
-    }
-
-    // Finally send the SYN
-    gettimeofday(&ev.time,0);
-    ev.type = EV_SYN;
-    ev.code = 0;
-    ev.value = 0;
-    if(write(touchfd, &ev, sizeof(ev)) < 0)
-    {
-        printf("write event failed, %s\n", strerror(errno));
-    }
-
-    printf("injectTouchEvent (x=%d, y=%d, down=%d)\n", x , y, down);    
-}
-
-static void ptrevent(int buttonMask, int x, int y, rfbClientPtr cl)
-{
-	/* Indicates either pointer movement or a pointer button press or release. The pointer is
-now at (x-position, y-position), and the current state of buttons 1 to 8 are represented
-by bits 0 to 7 of button-mask respectively, 0 meaning up, 1 meaning down (pressed).
-On a conventional mouse, buttons 1, 2 and 3 correspond to the left, middle and right
-buttons on the mouse. On a wheel mouse, each step of the wheel upwards is represented
-by a press and release of button 4, and each step downwards is represented by
-a press and release of button 5. 
-  From: http://www.vislab.usyd.edu.au/blogs/index.php/2009/05/22/an-headerless-indexed-protocol-for-input-1?blog=61 */
-	
-	//printf("Got ptrevent: %04x (x=%d, y=%d)\n", buttonMask, x, y);
-	if(buttonMask & 1) {
-		// Simulate left mouse event as touch event
-		injectTouchEvent(1, x, y);
-		injectTouchEvent(0, x, y);
-	} 
-}
-
-
 int pid;
 int main(int argc, char **argv)
 {
 	printf("\n======= oPsai VNCServer Daemon initiating =======\n");
 	pid = getpid();
 	printf("%5s: %d\n", "PID", pid);
-	if(argc > 1){
-		int i=1;
-		while(i < argc){
-			if(*argv[i] == '-'){
-				switch(*(argv[i] + 1)){
-					case 'k':
-						i++;
-						strcpy(KBD_DEVICE, argv[i]);
-						break;
-					case 't':
-						i++;
-						strcpy(TOUCH_DEVICE, argv[i]);
-						break;
-				}
-			}
-			i++;
-		}
-	}
 
 	printf("Initializing framebuffer device " FB_DEVICE "...\n");
 	init_fb();
-	printf("Initializing keyboard device %s ...\n", KBD_DEVICE);
-	init_kbd();
-	printf("Initializing touch device %s ...\n", TOUCH_DEVICE);
-	init_touch();
+
+
+	initInput();
 
 	init_fb_server(argc, argv);
 
@@ -683,6 +457,4 @@ int main(int argc, char **argv)
 
 	printf("Cleaning up...\n");
 	cleanup_fb();
-	cleanup_kdb();
-	cleanup_touch();
 }

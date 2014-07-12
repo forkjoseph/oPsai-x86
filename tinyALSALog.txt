@@ -1,0 +1,3594 @@
+I/AudioHardwareTinyALSA(20428): AudioStreamOutALSA::write setDevice
+D/AudioHardwareTinyALSA(20428): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x2 ,force= 0
+D/AudioHardwareTinyALSA(20428): OutALSA::setDevice: mDevice 0x2, newDevice = 0x2
+D/AudioHardwareTinyALSA(20428): setOutputVolume
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name
+V/TinyALSA(20428): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(20428): Entering mixer_ctl_set_value (mixer.c)
+I/AudioHardwareTinyALSA(20428): OutALSA::setDevice: mHandle NULL mode[0], Device[00000002] 
+I/AudioHardwareTinyALSA(20428): Open: mDefaults->direction=0 device=0
+D/AudioHardwareTinyALSA(20428): Channel: 2, Samplerate: 48000, Format: 0, Peroid Size: 1024, Period Count: 4
+V/TinyALSA(20428): Entering pcm_open (pcm.c)
+V/TinyALSA(20428):            card : 0
+V/TinyALSA(20428):          device : 0
+V/TinyALSA(20428):           flags : 0
+V/TinyALSA(20428):        channels : 2
+V/TinyALSA(20428):            rate : 48000
+V/TinyALSA(20428):     period_size : 1024
+V/TinyALSA(20428):    period_count : 4
+V/TinyALSA(20428):          format : 0
+V/TinyALSA(20428): start_threshold : 0
+V/TinyALSA(20428): silence_threshold : 0
+V/TinyALSA(20428):       avail_min : 0
+V/TinyALSA(20428):          using :/dev/snd/pcmC0D0p
+V/TinyALSA(20428): snd_pcm_info info:
+V/TinyALSA(20428):   device = 0
+V/TinyALSA(20428):   subdevice = 0
+V/TinyALSA(20428):   stream = 0
+V/TinyALSA(20428):   card = 0
+V/TinyALSA(20428):   id = '1'
+V/TinyALSA(20428):   name = ''
+V/TinyALSA(20428):   subname = 'subdevice #0'
+V/TinyALSA(20428):   dev_class = 0
+V/TinyALSA(20428):   dev_subclass = 0
+V/TinyALSA(20428):   subdevices_count = 2
+V/TinyALSA(20428):   subdevices_avail = 1
+V/TinyALSA(20428): Entering param_init (pcm.c)
+V/TinyALSA(20428): SNDRV_PCM_HW_PARAM_FIRST_MASK:0
+V/TinyALSA(20428): SNDRV_PCM_HW_PARAM_LAST_MASK:2
+V/TinyALSA(20428): SNDRV_PCM_HW_PARAM_FIRST_INTERVAL:8
+V/TinyALSA(20428): SNDRV_PCM_HW_PARAM_LAST_INTERVAL:19
+V/TinyALSA(20428): pcm format to alsa: SNDRV_PCM_FORMAT_S16_LE
+V/TinyALSA(20428): Entering param_set_mask (pcm.c)
+V/TinyALSA(20428): Entering param_is_mask (pcm.c)
+V/TinyALSA(20428): Entering param_set_mask (pcm.c)
+V/TinyALSA(20428): Entering param_is_mask (pcm.c)
+V/TinyALSA(20428): Entering param_set_min (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering param_set_int (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering param_set_int (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering param_set_int (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering param_set_int (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering param_set_int (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering param_set_mask (pcm.c)
+V/TinyALSA(20428): Entering param_is_mask (pcm.c)
+V/TinyALSA(20428): Entering param_get_int (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering param_get_int (pcm.c)
+V/TinyALSA(20428): Entering param_is_interval (pcm.c)
+V/TinyALSA(20428): Entering pcm_hw_mmap_status (pcm.c)
+V/TinyALSA(20428):      page_size:4096
+V/TinyALSA(16963): Entering mixer_open
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): Input	: format = 1, channels = 3, rate = 48000
+D/AudioHardwareTinyALSA(16963): default	: format = 0, channelCount = 2, rate = 48000
+I/AudioHardwareTinyALSA(16963): Setting ALSA device.
+D/AudioHardwareTinyALSA(16963): setMode 0
+D/AudioHardwareTinyALSA(16963): Leaving IN_CALL state, in_call=0
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_enum_by_string
+V/TinyALSA(16963): Entering mixer_ctl_fill_enum_string
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+D/AudioHardwareTinyALSA(16963): Entering AudioStreamOutALSA standby mode
+I/AudioHardwareTinyALSA(16963): AudioStreamOutALSA::setParameters() routing=2
+I/AudioHardwareTinyALSA(16963): mParent->isFactoryRouteEnable()=0
+I/AudioHardwareTinyALSA(16963): mLoopbackDevice=0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x0 ,force= 0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mDevice 0x0, newDevice = 0x2
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setPcmInterface: Stream=0x1, iSamplerate=8000++
+D/AudioHardwareTinyALSA(16963): setPcmInterface--
+I/AudioHardwareTinyALSA(16963): ### setVoiceVolume (0.000000)
+E/AudioHardwareTinyALSA(16963): opening deepOut
+D/AudioHardwareTinyALSA(16963): Input	: format = 1, channels = 3, rate = 48000
+D/AudioHardwareTinyALSA(16963): default	: format = 0, channelCount = 2, rate = 48000
+I/AudioHardwareTinyALSA(16963): AudioStreamOutALSA::setParameters() routing=2
+I/AudioHardwareTinyALSA(16963): mParent->isFactoryRouteEnable()=0
+I/AudioHardwareTinyALSA(16963): mLoopbackDevice=0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x2 ,force= 0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mDevice 0x2, newDevice = 0x2
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setPcmInterface: Stream=0x1, iSamplerate=8000++
+D/AudioHardwareTinyALSA(16963): setPcmInterface--
+D/AudioHardwareTinyALSA(16963): Entering AudioStreamOutALSA standby mode
+I/AudioHardwareTinyALSA(16963): setParameters(screen_state=on)
+I/AudioHardwareTinyALSA(16963): setParameters(restarting=true)
+D/AudioHardwareTinyALSA(16963): setMode 0
+I/AudioHardwareTinyALSA(16963): AudioStreamOutALSA::write setDevice
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x2 ,force= 0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mDevice 0x2, newDevice = 0x2
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+I/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mHandle NULL mode[0], Device[00000002] 
+I/AudioHardwareTinyALSA(16963): Open: mDefaults->direction=0 device=0
+D/AudioHardwareTinyALSA(16963): Channel: 2, Samplerate: 48000, Format: 0, Peroid Size: 1024, Period Count: 4
+V/TinyALSA(16963): Entering pcm_open (pcm.c)
+V/TinyALSA(16963):            card : 0
+V/TinyALSA(16963):          device : 0
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 0
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 0
+V/TinyALSA(16963):          using :/dev/snd/pcmC0D0p
+V/TinyALSA(16963): snd_pcm_info info:
+V/TinyALSA(16963):   device = 0
+V/TinyALSA(16963):   subdevice = 0
+V/TinyALSA(16963):   stream = 0
+V/TinyALSA(16963):   card = 0
+V/TinyALSA(16963):   id = '1'
+V/TinyALSA(16963):   name = ''
+V/TinyALSA(16963):   subname = 'subdevice #0'
+V/TinyALSA(16963):   dev_class = 0
+V/TinyALSA(16963):   dev_subclass = 0
+V/TinyALSA(16963):   subdevices_count = 2
+V/TinyALSA(16963):   subdevices_avail = 1
+V/TinyALSA(16963): Entering param_init (pcm.c)
+V/TinyALSA(16963): SNDRV_PCM_HW_PARAM_FIRST_MASK:0
+V/TinyALSA(16963): SNDRV_PCM_HW_PARAM_LAST_MASK:2
+V/TinyALSA(16963): SNDRV_PCM_HW_PARAM_FIRST_INTERVAL:8
+V/TinyALSA(16963): SNDRV_PCM_HW_PARAM_LAST_INTERVAL:19
+V/TinyALSA(16963): pcm format to alsa: SNDRV_PCM_FORMAT_S16_LE
+V/TinyALSA(16963): Entering param_set_mask (pcm.c)
+V/TinyALSA(16963): Entering param_is_mask (pcm.c)
+V/TinyALSA(16963): Entering param_set_mask (pcm.c)
+V/TinyALSA(16963): Entering param_is_mask (pcm.c)
+V/TinyALSA(16963): Entering param_set_min (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering param_set_int (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering param_set_int (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering param_set_int (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering param_set_int (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering param_set_int (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering param_set_mask (pcm.c)
+V/TinyALSA(16963): Entering param_is_mask (pcm.c)
+V/TinyALSA(16963): Entering param_get_int (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering param_get_int (pcm.c)
+V/TinyALSA(16963): Entering param_is_interval (pcm.c)
+V/TinyALSA(16963): Entering pcm_hw_mmap_status (pcm.c)
+V/TinyALSA(16963):      page_size:4096
+V/TinyALSA(16963): Entering pcm_is_ready (pcm.c)
+I/AudioHardwareTinyALSA(16963): before pcm_prepare
+D/AudioHardwareTinyALSA(16963): setPcmInterface: Stream=0x1, iSamplerate=8000++
+D/AudioHardwareTinyALSA(16963): setPcmInterface--
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : 0
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+I/AudioHardwareTinyALSA(16963): AudioStreamOutALSA::setParameters() routing=2
+I/AudioHardwareTinyALSA(16963): mParent->isFactoryRouteEnable()=0
+I/AudioHardwareTinyALSA(16963): mLoopbackDevice=0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x2 ,force= 0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mDevice 0x2, newDevice = 0x2
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setPcmInterface: Stream=0x1, iSamplerate=8000++
+D/AudioHardwareTinyALSA(16963): setPcmInterface--
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+I/AudioHardwareTinyALSA(16963): AudioStreamOutALSA::setParameters() routing=2
+I/AudioHardwareTinyALSA(16963): mParent->isFactoryRouteEnable()=0
+I/AudioHardwareTinyALSA(16963): mLoopbackDevice=0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x2 ,force= 0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mDevice 0x2, newDevice = 0x2
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setPcmInterface: Stream=0x1, iSamplerate=8000++
+D/AudioHardwareTinyALSA(16963): setPcmInterface--
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+I/AudioHardwareTinyALSA(16963): AudioStreamOutALSA::setParameters() routing=2
+I/AudioHardwareTinyALSA(16963): mParent->isFactoryRouteEnable()=0
+I/AudioHardwareTinyALSA(16963): mLoopbackDevice=0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x2 ,force= 0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mDevice 0x2, newDevice = 0x2
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setPcmInterface: Stream=0x1, iSamplerate=8000++
+D/AudioHardwareTinyALSA(16963): setPcmInterface--
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+I/AudioHardwareTinyALSA(16963): ### setVoiceVolume (0.800000)
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+I/AudioHardwareTinyALSA(16963): AudioStreamOutALSA::setParameters() routing=2
+I/AudioHardwareTinyALSA(16963): mParent->isFactoryRouteEnable()=0
+I/AudioHardwareTinyALSA(16963): mLoopbackDevice=0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mode = 0, newDevice=0x2, currentDevice=0x2 ,force= 0
+D/AudioHardwareTinyALSA(16963): OutALSA::setDevice: mDevice 0x2, newDevice = 0x2
+D/AudioHardwareTinyALSA(16963): setOutputVolume
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name
+V/TinyALSA(16963): Entering mixer_get_ctl_by_name_and_index
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+V/TinyALSA(16963): Entering mixer_ctl_set_value (mixer.c)
+D/AudioHardwareTinyALSA(16963): setPcmInterface: Stream=0x1, iSamplerate=8000++
+D/AudioHardwareTinyALSA(16963): setPcmInterface--
+I/AudioHardwareTinyALSA(16963): setParameters(toMono=0)
+I/AudioHardwareTinyALSA(16963): setParameters(dualmic_enabled=true)
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+I/AudioHardwareTinyALSA(16963): setParameters(all_sound_mute=0)
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+I/AudioHardwareTinyALSA(16963): setParameters(restarting=false)
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(16963):    period_count : 4
+V/TinyALSA(16963):          format : 0
+V/TinyALSA(16963): start_threshold : 4096
+V/TinyALSA(16963): silence_threshold : 0
+V/TinyALSA(16963):       avail_min : 1
+V/TinyALSA(16963): pcm_mmap_status_dump:
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->state : 1144737792
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->pad1 : 1152286720
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->hw_ptr : 0
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->tstamp : 0.000000000
+V/TinyALSA(16963): pcm->snd_pcm_mmap_status->snd_pcm_state_t : 0
+V/TinyALSA(16963): noirq_frames_per_msec : 0
+V/TinyALSA(16963): wait_for_avail_min : 0
+V/TinyALSA(16963): Entering pcm_write (pcm.c) with 0x43f8faf0 and 1024
+V/TinyALSA(16963):              fd : 25
+V/TinyALSA(16963):           flags : 0
+V/TinyALSA(16963):         running : -1
+V/TinyALSA(16963):       underruns : 0
+V/TinyALSA(16963):     buffer_size : 4096
+V/TinyALSA(16963):        boundary : 1073741824
+V/TinyALSA(16963):        channels : 2
+V/TinyALSA(16963):            rate : 48000
+V/TinyALSA(16963):     period_size : 1024
+V/TinyALSA(169

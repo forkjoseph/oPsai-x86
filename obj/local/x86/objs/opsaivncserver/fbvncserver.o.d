@@ -86,6 +86,9 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/net/if.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/if.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -99,11 +102,11 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
  jni/androidvncserver/LibVNCServer-0.9.7/rfb/keysym.h \
- jni/androidvncserver/../screenshot/fb.h
+ jni/androidvncserver/../screenshot/fb.h \
+ jni/androidvncserver/inputMethods/input.h \
+ jni/androidvncserver/suinput/suinput.h \
+ jni/androidvncserver/linux/uinput.h
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
@@ -277,6 +280,12 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h:
 
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
+
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h:
@@ -303,12 +312,12 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h:
 
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
-
 jni/androidvncserver/LibVNCServer-0.9.7/rfb/keysym.h:
 
 jni/androidvncserver/../screenshot/fb.h:
+
+jni/androidvncserver/inputMethods/input.h:
+
+jni/androidvncserver/suinput/suinput.h:
+
+jni/androidvncserver/linux/uinput.h:
