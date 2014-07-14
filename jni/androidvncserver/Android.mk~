@@ -31,23 +31,25 @@ LOCAL_SRC_FILES:= \
 	LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.c \
 	LibVNCServer-0.9.7/libvncserver/zywrletemplate.c \
 	LibVNCServer-0.9.7/libvncserver/tight.c \
+	multi.c \
 	fbvncserver.c \
 	inputMethods/input.c \
 	suinput/suinput.c 
 
 
 LOCAL_LDLIBS +=  -llog -lz -ldl -landroid	
-LOCAL_CFLAGS  +=  -Wall \
-									-O3 \
-									-DLIBVNCSERVER_HAVE_ZLIB \
-									-DLIBVNCSERVER_HAVE_LIBPNG \
-									-DLIBVNCSERVER_HAVE_LIBJPEG
+LOCAL_CFLAGS += -Wall \
+		-O3 \
+		-DLIBVNCSERVER_HAVE_ZLIB \
+		-DLIBVNCSERVER_HAVE_LIBPNG \
+		-DLIBVNCSERVER_HAVE_LIBJPEG
 									
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH) \
 	$(LOCAL_PATH)/../screenMethods \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7/libvncserver \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7 \
+	$(LOCAL_PATH)/LibVNCServer-0.9.7/common \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7/libvncserver \
 	$(LOCAL_PATH)/LibVNCServer-0.9.7/rfb \
 	$(LOCAL_PATH)/../libpng \

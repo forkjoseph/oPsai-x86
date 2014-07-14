@@ -1,5 +1,5 @@
 obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
- jni/androidvncserver/fbvncserver.c \
+ jni/androidvncserver/fbvncserver.c jni/androidvncserver/multi.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -24,10 +24,11 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/alloca.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/strings.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/unistd.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/select.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/time.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/time.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/unistd.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/select.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/signal.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/limits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/limits.h \
@@ -68,6 +69,14 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/syscall.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/errno.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/unistd.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/unistd_32.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/fcntl.h \
@@ -86,15 +95,7 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/net/if.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/if.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/errno.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h \
  jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h \
  jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbproto.h \
  jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbconfig.h \
@@ -102,11 +103,15 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
  jni/androidvncserver/LibVNCServer-0.9.7/rfb/keysym.h \
  jni/androidvncserver/../screenshot/fb.h \
  jni/androidvncserver/inputMethods/input.h \
  jni/androidvncserver/suinput/suinput.h \
  jni/androidvncserver/linux/uinput.h
+
+jni/androidvncserver/multi.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
@@ -156,13 +161,15 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h:
 
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/unistd.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/select.h:
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/time.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/time.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/unistd.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/select.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/signal.h:
 
@@ -244,6 +251,22 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
 
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/syscall.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/errno.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/unistd.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/unistd_32.h:
+
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/fcntl.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/fcntl.h:
@@ -280,23 +303,7 @@ obj/local/x86/objs/opsaivncserver/fbvncserver.o: \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h:
 
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
-
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/errno.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h:
-
-/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h:
 
 jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h:
 
@@ -311,6 +318,10 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h:
 
 jni/androidvncserver/LibVNCServer-0.9.7/rfb/keysym.h:
 

@@ -1,87 +1,39 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/mman.h>
-#include <sys/ioctl.h>
-#include <sys/stat.h>
-#include <sys/sysmacros.h>             /* For makedev() */
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <fcntl.h>
-#include <linux/fb.h>
-#include <linux/input.h>
-#include <netinet/in.h>
-#include <net/if.h>
+#include "multi.h"
 
-/* Multithreading */
-#include <pthread.h>
+#define NUM_CPU 800
 
-#include <assert.h>
-#include <errno.h>
+void private_fb_create() {
+	thrs = malloc (sizeof(pthread_t) * NUM_CPU); // atom has 4 CPUs
 
-/* libvncserver */
-#include "rfb/rfb.h"
-#include "rfb/keysym.h"
+	int i;
+	struct timeval stop, start;
+	gettimeofday(&start, NULL);
+//   	printf("for loop start: %lu\n", start.tv_usec);
+	for (i = 0; i < NUM_CPU; i++) {
+		pthread_create(&thrs[i], NULL, private_fb_read, (int)i);
+//		printf("thread %d created\n", i);
+	}
+   	gettimeofday(&stop, NULL);
+//   	printf("for loop stop: %lu\n", stop.tv_usec);
 
-/* framebuffer and input */
-#include "fb.h" 
-#include "input.h"
 
-#define FB_DEVICE "/dev/graphics/fb0"
-static struct fb_var_screeninfo scrinfo;
-static struct fb_fix_screeninfo finfo;
-static int fbfd = -1;
-static int kbdfd = -1;
-static int touchfd = -1;
-static unsigned int *fbmmap = MAP_FAILED;
-static unsigned int *vncbuf;
-static unsigned int *fbbuf;
+}
 
-/* Android already has 5900 bound natively. */
-#define VNC_PORT 5901
-static rfbScreenInfoPtr vncscr;
+//#define Y (800 / NUM_CPU)
+#define Y ((4 * 800) / NUM_CPU)
+void* private_fb_read(int thread_id) {
+//	struct timeval stop, start;
 
-static int xmin, xmax;
-static int ymin, ymax;
+//	gettimeofday(&start, NULL);
+//   	printf("private_fb_read of thread %d start time: %lu\n", thread_id, start.tv_usec);
 
-/* No idea, just copied from fbvncserver as part of the frame differerencing
- * algorithm.  I will probably be later rewriting all of this. */
-static struct varblock_t
-{
-	int min_i;
-	int min_j;
-	int max_i;
-	int max_j;
-	int r_offset;
-	int g_offset;
-	int b_offset;
-	int rfb_xres;
-	int rfb_maxy;
-} varblock;
+    pread(fb_des, raw + (1280 * (Y * thread_id)), 1280 * Y, 1280 * (Y * thread_id));
+//   	gettimeofday(&stop, NULL);
+//   	printf("private_fb_read of thread %d stop time: %lu\n", thread_id, stop.tv_usec );
+//   	printf("private_fb_read of thread %d total time: %lu\n", thread_id, stop.tv_usec - start.tv_usec);
 
-/*****************************************************************************/
-
-static void keyevent(rfbBool down, rfbKeySym key, rfbClientPtr cl);
-static void ptrevent(int buttonMask, int x, int y, rfbClientPtr cl);
-
-/*****************************************************************************/
-
-static void init_private_fb(struct fb* fb);
-static void* private_fb(struct fb* fb);
-static void dump_fb(const struct fb* fb);
-static int get_fb_format(const struct fb *fb);
-static char* find_fb_format(const struct fb *fb);
-struct fb fb;
-struct fb_var_screeninfo vinfo;
-unsigned char *raw; 
-unsigned int bytespp;
-unsigned int raw_size;
-unsigned int raw_line_length;
-ssize_t read_size;
-int fb_temp;
-#define PROCESS_TIME 100000
-/*****************************************************************************/
+	return NULL;
+}
 
 static void init_fb(void)
 {
@@ -96,21 +48,6 @@ static void init_fb(void)
 	init_private_fb (&fb);
 	fbmmap = private_fb(&fb);
 
-	printf("%15s : %p\n", "fbmmap addr", fbmmap);
-	printf("%15s : %x\n", "fbmmap 1s color", fbmmap[0]);
-
-	printf("%15s : %x\n", "current color", fbmmap[(1280*600) + 640]);
-
- //    fbmmap = mmap (NULL, raw_size, PROT_READ | PROT_WRITE, MAP_SHARED , fb_temp,0);
- //    int i,j;
-	// for (i=0; i < 400 ; i++ ) {
-	// 	for(j = 0; j < 1280; j++){
-	// 		*(fbmmap+(i*1280) + j) = 0xff0000ff;
-	// 	}
-	// }
-	// printf("%15s : %p\n", "fbmmap addr", fbmmap);
-	// printf("%15s : %x\n", "current color", fbmmap[0]);
-
 	if (fbmmap == MAP_FAILED)
 	{
 		printf("mmap failed\n");
@@ -119,29 +56,26 @@ static void init_fb(void)
 	printf("\n");
 }
 
-
-
 static void init_private_fb(struct fb* fb) {
-	if ((fb_temp = open(FB_DEVICE, O_RDWR)) < 0 ) 
+	if ((fb_des = open(FB_DEVICE, O_RDWR)) < 0 )
     	return;
 
-    if (ioctl(fb_temp, FBIOGET_FSCREENINFO, &finfo) != 0)
+    if (ioctl(fb_des, FBIOGET_FSCREENINFO, &finfo) != 0)
 	{
 		printf("ioctl error from finfo\n");
-		// close(fb_temp);
+		close(fb_des);
 		exit(EXIT_FAILURE);
 	}
 
-	if (ioctl(fb_temp, FBIOGET_VSCREENINFO, &vinfo) != 0 )
+	if (ioctl(fb_des, FBIOGET_VSCREENINFO, &vinfo) != 0 )
 	{
 		printf("ioctl error\n");
-		// close(fb_temp);
+		close(fb_des);
 		exit(EXIT_FAILURE);
 	}
 
 	bytespp = vinfo.bits_per_pixel / 8;
-	raw_line_length = finfo.line_length;
-	raw_size = vinfo.yres * raw_line_length;
+	raw_size = vinfo.yres * finfo.line_length;
 
 	fb->bpp = vinfo.bits_per_pixel;
     fb->size = vinfo.xres * vinfo.yres * bytespp;
@@ -159,35 +93,39 @@ static void init_private_fb(struct fb* fb) {
     dump_fb(fb);
     printf("%15s : %u\n", "bytespp", bytespp);
     printf("%15s : %u\n", "raw size", raw_size);
-}
 
-static void* private_fb( struct fb *fb){
     raw = malloc(raw_size);
     if (!raw) {
     	printf("raw: memory error\n");
-    	// close(fb_temp);
-    	return NULL;
+    	return;
     }
-	unsigned int active_buffer_offset = 0;
- 	int num_buffers = 0;
-
-    lseek(fb_temp, 0, SEEK_SET);
-    read_size = read(fb_temp, raw, raw_size); // this makes so slow
-//  	if (read_size < 0)
-//  		printf("%15s : %d\n", "buffer size", read_size);
-
-    if (read_size < 0 || (unsigned)read_size != raw_size) {
-    	printf("read_size: read error\n");
-    	// close(fb_temp);
-	    free(raw);
-		exit(EXIT_FAILURE);
-	}
-    fb->data = raw;
-
-    return fb->data;
+    pthread_mutex_init(&frame_mutex, NULL);
+    pthread_cond_init(&frame_cond, NULL);
+    private_fb_create();
 }
-// freeze thing -> should close framebuffer and reopen it 
 
+static void* private_fb( struct fb *fb){
+//	unsigned int active_buffer_offset = 0;
+// 	int num_buffers = 0;
+//    struct timeval stop, start;
+
+//	gettimeofday(&start, NULL);
+//    lseek(fb_des, 0, SEEK_SET);
+
+//    read_size = read(fb_des, raw, raw_size); // this makes so slow
+//	gettimeofday(&stop, NULL);
+//	printf("private_fb time: %lu\n", stop.tv_usec - start.tv_usec);
+
+
+//    if (read_size < 0 || (unsigned)read_size != raw_size) {
+//    	printf("read_size: read error\n");
+//    	close(fb_des);
+//	    free(raw);
+//		exit(EXIT_FAILURE);
+//	}
+    private_fb_create();
+    return (fb->data = raw);
+}
 
 static void init_fb_server(int argc, char **argv)
 {
@@ -258,15 +196,8 @@ static void init_fb_server(int argc, char **argv)
 	varblock.rfb_maxy = vinfo.xres;
 }
 
-/* Eureka magic ;> */
-#define PIXEL_FB_TO_RFB(p,r,g,b) (((p>>r)<<16)&0x00ffffff)|((((p>>g))<<8)&0x00ffffff)|(((p>>b)&0x00ffffff))
-#define TRUE_VAL 0xff00ff
-#define GREEN_VAL 0x00ff00
-#include <sys/time.h>
-
 static void update_screen(void)
 {
-	// printf("updateing\n");
 	unsigned int *f, *c, *r;
 	int x, y;
 
@@ -276,12 +207,11 @@ static void update_screen(void)
 	struct timeval stop, start;
 	gettimeofday(&start, NULL);
 
-
-	free(fbmmap);
 	fbmmap = private_fb(&fb); // apprx 0.1s 
+//	printf("raw: %p\n", fbmmap);
 
 	gettimeofday(&stop, NULL);
-	// printf("private_fb time: %lu\n", stop.tv_usec - start.tv_usec); 
+//	printf("private_fb time: %lu\n", stop.tv_usec - start.tv_usec);
 
 	f = (unsigned int *)fbmmap;        /* -> framebuffer         */
 	c = (unsigned int *)fbbuf;         /* -> compare framebuffer */
@@ -422,22 +352,26 @@ static int get_fb_format(const struct fb *fb)
     return FB_FORMAT_UNKNOWN;
 }
 
-
-/*****************************************************************************/
 static void cleanup_fb(void)
 {
-	if(fbfd != -1)
-	{
-		close(fbfd);
-	}
+	if(fb_des != -1)
+		close(fb_des);
+	int i;
+
+	for(i = 0; i < 4; i++)
+		pthread_join(thrs[i], NULL);
+
+	free(thrs);
 }
 
-int pid;
 int main(int argc, char **argv)
 {
+	int pid;
 	printf("\n======= oPsai VNCServer Daemon initiating =======\n");
 	pid = getpid();
 	printf("%5s: %d\n", "PID", pid);
+	pid = (int)sysconf( _SC_NPROCESSORS_ONLN);
+	printf("%5s: %d\n", "Number of CPUs", pid);
 
 	printf("Initializing framebuffer device " FB_DEVICE "...\n");
 	init_fb();

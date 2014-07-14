@@ -36,12 +36,12 @@ LOCAL_SRC_FILES:= \
 	suinput/suinput.c 
 
 
-LOCAL_LDLIBS +=  -llog -lz -ldl -landroid	
-LOCAL_CFLAGS  +=  -Wall \
-									-O3 \
-									-DLIBVNCSERVER_HAVE_ZLIB \
-									-DLIBVNCSERVER_HAVE_LIBPNG \
-									-DLIBVNCSERVER_HAVE_LIBJPEG
+LOCAL_LDLIBS +=  -llog -lz -ldl -landroid
+LOCAL_CFLAGS += -Wall \
+		-O3 \
+		-DLIBVNCSERVER_HAVE_ZLIB \
+		-DLIBVNCSERVER_HAVE_LIBPNG \
+		-DLIBVNCSERVER_HAVE_LIBJPEG
 									
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH) \
