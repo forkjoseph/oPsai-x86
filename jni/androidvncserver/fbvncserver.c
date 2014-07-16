@@ -1,19 +1,21 @@
 #include "multi.h"
 
 #define NUM_CPU 800
+static unsigned long time_val;
 
 void private_fb_create() {
 	thrs = malloc (sizeof(pthread_t) * NUM_CPU); // atom has 4 CPUs
 
 	int i;
 	struct timeval stop, start;
-	gettimeofday(&start, NULL);
+//	gettimeofday(&start, NULL);
 //   	printf("for loop start: %lu\n", start.tv_usec);
+//	time_val = 0;
 	for (i = 0; i < NUM_CPU; i++) {
 		pthread_create(&thrs[i], NULL, private_fb_read, (int)i);
 //		printf("thread %d created\n", i);
 	}
-   	gettimeofday(&stop, NULL);
+//   	gettimeofday(&stop, NULL);
 //   	printf("for loop stop: %lu\n", stop.tv_usec);
 
 
@@ -29,6 +31,7 @@ void* private_fb_read(int thread_id) {
 
     pread(fb_des, raw + (1280 * (Y * thread_id)), 1280 * Y, 1280 * (Y * thread_id));
 //   	gettimeofday(&stop, NULL);
+//   	time_val += (stop.tv_usec - start.tv_usec);
 //   	printf("private_fb_read of thread %d stop time: %lu\n", thread_id, stop.tv_usec );
 //   	printf("private_fb_read of thread %d total time: %lu\n", thread_id, stop.tv_usec - start.tv_usec);
 
@@ -248,6 +251,8 @@ static void update_screen(void)
 			r++;
 		}
 	}
+
+//	printf("private_fb_read (%d CPUs): %lu\n", NUM_CPU, time_val);
 
 	if (varblock.min_i < 9999)
 	{
