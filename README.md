@@ -1,4 +1,4 @@
-Okay PCloud, Show As Is (oPsai).
+oPsai: Okay, PCloud Show As Is
 ====================================================
 oPsai project is a client side PCloud in Android.
 
