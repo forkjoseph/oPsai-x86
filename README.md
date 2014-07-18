@@ -15,3 +15,4 @@ Notice:
   Some part of code from droid-VNC server (https://github.com/oNaiPs/droid-VNC-server) is used to replicate common problem and to show diverse ways to resolve the problems. 
   oPsai is built on rfb version 3.8
   PortAudio is developed by http://www.portaudio.com under MIT license. 
+ 
