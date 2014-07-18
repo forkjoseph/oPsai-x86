@@ -31,7 +31,7 @@ LOCAL_SRC_FILES:= \
 	LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.c \
 	LibVNCServer-0.9.7/libvncserver/zywrletemplate.c \
 	LibVNCServer-0.9.7/libvncserver/tight.c \
-	fbvncserver.c \
+	opsaivncserver.c \
 	inputMethods/input.c \
 	suinput/suinput.c 
 

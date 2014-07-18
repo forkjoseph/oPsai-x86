@@ -1,4 +1,4 @@
-#include "multi.h"
+#include "opsaivncserver.h"
 
 #define NUM_CPU 800
 static unsigned long time_val;
