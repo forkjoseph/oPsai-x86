@@ -11,8 +11,8 @@ Kernel version 3.4.34-1135839 and CWR version 6.9.
 Thought it is a branch of LibVNCServer, it rarely uses the code or plugins. As someone (JS), "HIGHLY QUALIFIED" software developer did not have time to answer a few questions, I decided to take the problem from the scractch and update it. Unlike SOMEONE, shot me an email if you have a question. 
 
 Notice:
-  Virtual Networking Protocol (VNC) and Remote FrameBuffer (RFB) are developed by RealVNC (formerly of Olivetti Research Ltd / AT&T Labs Cambridge. http://www.realvnc.com/docs/rfbproto.pdf)
-  Some part of code from droid-VNC server (https://github.com/oNaiPs/droid-VNC-server) is used to replicate common problem and to show diverse ways to resolve the problems. 
-  oPsai is built on rfb version 3.8
-  PortAudio is developed by http://www.portaudio.com under MIT license. 
+    * Virtual Networking Protocol (VNC) and Remote FrameBuffer (RFB) are developed by RealVNC (formerly of Olivetti Research Ltd / AT&T Labs Cambridge. http://www.realvnc.com/docs/rfbproto.pdf)
+    * Some part of code from droid-VNC server (https://github.com/oNaiPs/droid-VNC-server) is used to replicate common problem and to show diverse ways to resolve the problems. 
+    * oPsai is built on rfb version 3.8
+    * PortAudio is developed by http://www.portaudio.com under MIT license. 
  
