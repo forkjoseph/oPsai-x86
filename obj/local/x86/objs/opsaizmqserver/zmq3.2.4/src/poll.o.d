@@ -1,8 +1,9 @@
-obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/poll.o: \
- jni/opsai-zmq/zmq3.2.4/src/poll.cpp jni/opsai-zmq/zmq3.2.4/src/poll.hpp \
- jni/opsai-zmq/zmq3.2.4/src/poller.hpp \
- jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
- jni/opsai-zmq/zmq3.2.4/src/epoll.hpp \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/poll.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/poll.cpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/poll.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/poller.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/epoll.hpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/vector \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_prolog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
@@ -92,7 +93,8 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/poll.o: \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_epilog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/epoll.h \
- jni/opsai-zmq/zmq3.2.4/src/fd.hpp jni/opsai-zmq/zmq3.2.4/src/thread.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/fd.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/thread.hpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/time.h \
@@ -107,22 +109,22 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/poll.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/signal.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sigcontext.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
- jni/opsai-zmq/zmq3.2.4/src/poller_base.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/poller_base.hpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/map \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_map.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_tree.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_tree.c \
- jni/opsai-zmq/zmq3.2.4/src/clock.hpp \
- jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
- jni/opsai-zmq/zmq3.2.4/src/atomic_counter.hpp
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/clock.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/atomic_counter.hpp
 
-jni/opsai-zmq/zmq3.2.4/src/poll.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/poll.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/poller.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/poller.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/epoll.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/epoll.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/vector:
 
@@ -302,9 +304,9 @@ jni/opsai-zmq/zmq3.2.4/src/epoll.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/epoll.h:
 
-jni/opsai-zmq/zmq3.2.4/src/fd.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/fd.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/thread.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/thread.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/pthread.h:
 
@@ -334,7 +336,7 @@ jni/opsai-zmq/zmq3.2.4/src/thread.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
 
-jni/opsai-zmq/zmq3.2.4/src/poller_base.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/poller_base.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/map:
 
@@ -344,8 +346,8 @@ jni/opsai-zmq/zmq3.2.4/src/poller_base.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_tree.c:
 
-jni/opsai-zmq/zmq3.2.4/src/clock.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/clock.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/atomic_counter.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/atomic_counter.hpp:

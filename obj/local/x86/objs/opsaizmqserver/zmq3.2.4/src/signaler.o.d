@@ -1,6 +1,6 @@
-obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/signaler.o: \
- jni/opsai-zmq/zmq3.2.4/src/signaler.cpp \
- jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/signaler.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/signaler.cpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/poll.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -8,9 +8,10 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/signaler.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/poll.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/poll.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/poll.h \
- jni/opsai-zmq/zmq3.2.4/src/signaler.hpp \
- jni/opsai-zmq/zmq3.2.4/src/fd.hpp jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
- jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/signaler.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/fd.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdint.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stddef.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
@@ -28,8 +29,9 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/signaler.o: \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/_types.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/_types.h \
- jni/opsai-zmq/zmq3.2.4/src/config.hpp jni/opsai-zmq/zmq3.2.4/src/err.hpp \
- jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/config.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -67,7 +69,7 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/signaler.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
- jni/opsai-zmq/zmq3.2.4/src/ip.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ip.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/eventfd.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/fcntl.h \
@@ -106,7 +108,7 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/signaler.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/swab.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/generic.h
 
-jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/poll.h:
 
@@ -122,13 +124,13 @@ jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/poll.h:
 
-jni/opsai-zmq/zmq3.2.4/src/signaler.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/signaler.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/fd.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/fd.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdint.h:
 
@@ -164,11 +166,11 @@ jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/_types.h:
 
-jni/opsai-zmq/zmq3.2.4/src/config.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/config.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/err.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h:
 
@@ -244,7 +246,7 @@ jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
 
-jni/opsai-zmq/zmq3.2.4/src/ip.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ip.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/eventfd.h:
 

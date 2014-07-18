@@ -1,7 +1,7 @@
-obj/local/x86/objs/opsaivncserver/inputMethods/input.o: \
- jni/androidvncserver/inputMethods/input.c \
- jni/androidvncserver/inputMethods/input.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaivncserver/inputMethods/input.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/inputMethods/input.c \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/inputMethods/input.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -26,9 +26,9 @@ obj/local/x86/objs/opsaivncserver/inputMethods/input.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/alloca.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/strings.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbproto.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbconfig.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/time.h \
@@ -70,7 +70,7 @@ obj/local/x86/objs/opsaivncserver/inputMethods/input.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
- jni/androidvncserver/suinput/suinput.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/suinput/suinput.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/input.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ioctl.h \
@@ -79,11 +79,11 @@ obj/local/x86/objs/opsaivncserver/inputMethods/input.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/ioctls.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/termbits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl_compat.h \
- jni/androidvncserver/linux/uinput.h
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/linux/uinput.h
 
-jni/androidvncserver/inputMethods/input.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/inputMethods/input.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
@@ -133,11 +133,11 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbproto.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbconfig.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h:
 
@@ -221,7 +221,7 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
 
-jni/androidvncserver/suinput/suinput.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/suinput/suinput.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/input.h:
 
@@ -239,4 +239,4 @@ jni/androidvncserver/suinput/suinput.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl_compat.h:
 
-jni/androidvncserver/linux/uinput.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/linux/uinput.h:

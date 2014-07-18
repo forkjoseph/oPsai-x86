@@ -1,6 +1,6 @@
-obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/address.o: \
- jni/opsai-zmq/zmq3.2.4/src/address.cpp \
- jni/opsai-zmq/zmq3.2.4/src/address.hpp \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/address.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/address.cpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/address.hpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/string \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_prolog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
@@ -148,8 +148,8 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/address.o: \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_string_io.c \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_epilog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
- jni/opsai-zmq/zmq3.2.4/src/err.hpp \
- jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -158,8 +158,8 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/address.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/assert.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h \
- jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
- jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/socket.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h \
@@ -168,7 +168,7 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/address.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
- jni/opsai-zmq/zmq3.2.4/src/tcp_address.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/tcp_address.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/endian.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/endian.h \
@@ -181,7 +181,7 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/address.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h \
- jni/opsai-zmq/zmq3.2.4/src/ipc_address.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ipc_address.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/un.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/un.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/sstream \
@@ -189,7 +189,7 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/address.o: \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_sstream.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_sstream.c
 
-jni/opsai-zmq/zmq3.2.4/src/address.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/address.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/string:
 
@@ -485,9 +485,9 @@ jni/opsai-zmq/zmq3.2.4/src/address.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h:
 
-jni/opsai-zmq/zmq3.2.4/src/err.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h:
 
@@ -505,9 +505,9 @@ jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h:
 
-jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h:
 
@@ -525,7 +525,7 @@ jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
 
-jni/opsai-zmq/zmq3.2.4/src/tcp_address.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/tcp_address.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h:
 
@@ -551,7 +551,7 @@ jni/opsai-zmq/zmq3.2.4/src/tcp_address.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h:
 
-jni/opsai-zmq/zmq3.2.4/src/ipc_address.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ipc_address.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/un.h:
 

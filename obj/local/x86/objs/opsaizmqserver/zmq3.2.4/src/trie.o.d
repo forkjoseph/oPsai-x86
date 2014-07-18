@@ -1,5 +1,5 @@
-obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/trie.o: \
- jni/opsai-zmq/zmq3.2.4/src/trie.cpp \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/trie.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/trie.cpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdlib.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/config/features.h \
@@ -88,9 +88,9 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/trie.o: \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_uninitialized.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_construct.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c \
- jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
- jni/opsai-zmq/zmq3.2.4/src/err.hpp \
- jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -99,7 +99,7 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/trie.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/assert.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h \
- jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/socket.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h \
@@ -108,8 +108,8 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/trie.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
- jni/opsai-zmq/zmq3.2.4/src/trie.hpp \
- jni/opsai-zmq/zmq3.2.4/src/stdint.hpp
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/trie.hpp \
+ /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdlib.h:
 
@@ -287,11 +287,11 @@ obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/trie.o: \
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_tempbuf.c:
 
-jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/err.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h:
 
@@ -309,7 +309,7 @@ jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h:
 
-jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h:
 
@@ -327,6 +327,6 @@ jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
 
-jni/opsai-zmq/zmq3.2.4/src/trie.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/trie.hpp:
 
-jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
+/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:

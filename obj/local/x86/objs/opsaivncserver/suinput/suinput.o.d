@@ -1,5 +1,5 @@
-obj/local/x86/objs/opsaivncserver/suinput/suinput.o: \
- jni/androidvncserver/suinput/suinput.c \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaivncserver/suinput/suinput.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/suinput/suinput.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -49,7 +49,7 @@ obj/local/x86/objs/opsaivncserver/suinput/suinput.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/sysconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/capability.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h \
- jni/androidvncserver/linux/uinput.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/linux/uinput.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/input.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ioctl.h \
@@ -59,7 +59,7 @@ obj/local/x86/objs/opsaivncserver/suinput/suinput.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/termbits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl_compat.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
- jni/androidvncserver/suinput/suinput.h
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/suinput/suinput.h
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h:
 
@@ -159,7 +159,7 @@ obj/local/x86/objs/opsaivncserver/suinput/suinput.o: \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h:
 
-jni/androidvncserver/linux/uinput.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/linux/uinput.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/input.h:
 
@@ -179,4 +179,4 @@ jni/androidvncserver/linux/uinput.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
-jni/androidvncserver/suinput/suinput.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/suinput/suinput.h:

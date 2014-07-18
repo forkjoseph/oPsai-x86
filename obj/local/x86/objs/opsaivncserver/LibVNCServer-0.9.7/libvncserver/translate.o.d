@@ -1,6 +1,6 @@
-obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/translate.o: \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/translate.c \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/translate.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/translate.c \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -25,9 +25,9 @@ obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/translate.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/alloca.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/strings.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbproto.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbconfig.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/time.h \
@@ -69,14 +69,14 @@ obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/translate.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbregion.h \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tableinitcmtemplate.c \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tableinittctemplate.c \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tabletranstemplate.c \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tableinit24.c \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tabletrans24template.c
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbregion.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tableinitcmtemplate.c \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tableinittctemplate.c \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tabletranstemplate.c \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tableinit24.c \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tabletrans24template.c
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
@@ -126,11 +126,11 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfb.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbproto.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbconfig.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h:
 
@@ -214,14 +214,14 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbregion.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbregion.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tableinitcmtemplate.c:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tableinitcmtemplate.c:
 
-jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tableinittctemplate.c:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tableinittctemplate.c:
 
-jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tabletranstemplate.c:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tabletranstemplate.c:
 
-jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tableinit24.c:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tableinit24.c:
 
-jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/tabletrans24template.c:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/tabletrans24template.c:

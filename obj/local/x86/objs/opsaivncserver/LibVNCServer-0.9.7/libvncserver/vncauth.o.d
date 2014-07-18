@@ -1,5 +1,5 @@
-obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/vncauth.o: \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/vncauth.c \
+/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/vncauth.o: \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/vncauth.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -45,9 +45,9 @@ obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/vncauth.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/sysconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/capability.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbproto.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbconfig.h \
- jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h \
@@ -68,7 +68,7 @@ obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/vncauth.o: \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h \
- jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/d3des.h \
+ /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/d3des.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/math.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/stat.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/stat.h \
@@ -164,11 +164,11 @@ obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/vncauth.o: \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbproto.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbconfig.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h:
 
@@ -210,7 +210,7 @@ jni/androidvncserver/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h:
 
-jni/androidvncserver/LibVNCServer-0.9.7/libvncserver/d3des.h:
+/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/d3des.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/math.h:
 
