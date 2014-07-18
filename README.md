@@ -1,4 +1,4 @@
-Okay PCloud, Show As Is (oPsai).
+oPsai: Okay, PCloud Show As Is
 ====================================================
 oPsai project is a client side PCloud in Android.
 
@@ -14,10 +14,13 @@ As someone (JS), "HIGHLY QUALIFIED" software developer did not have time to answ
 
 Unlike SOMEONE, shot me an email if you have a question. 
 
+=========================
 Notice:
-Virtual Networking Protocol (VNC) and Remote FrameBuffer (RFB) are developed by RealVNC.
-(formerly of Olivetti Research Ltd / AT&T Labs Cambridge).
--> http://www.realvnc.com/docs/rfbproto.pdf
-oPsai is built on rfb version 3.8
 
-PortAudio is developed by http://www.portaudio.com under MIT license. 
+	Virtual Networking Protocol (VNC) and Remote FrameBuffer (RFB) are developed by RealVNC.
+	(formerly AT&T Labs Cambridge): http://www.realvnc.com/docs/rfbproto.pdf
+	Some part of code from droid-VNC server (https://github.com/oNaiPs/droid-VNC-server) 
+	is used to replicate common problem and to show diverse ways to resolve the problems. 
+	oPsai is built on rfb version 3.8
+	PortAudio is developed by http://www.portaudio.com under MIT license. 
+ 
