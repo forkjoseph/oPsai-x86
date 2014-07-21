@@ -1,6 +1,6 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/ifaddrs.o: \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ifaddrs.c \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ifaddrs.h \
+obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/ifaddrs.o: \
+ jni/opsai-zmq/zmq3.2.4/src/ifaddrs.c \
+ jni/opsai-zmq/zmq3.2.4/src/ifaddrs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/api-level.h \
@@ -98,7 +98,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/netlink.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/rtnetlink.h
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ifaddrs.h:
+jni/opsai-zmq/zmq3.2.4/src/ifaddrs.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h:
 

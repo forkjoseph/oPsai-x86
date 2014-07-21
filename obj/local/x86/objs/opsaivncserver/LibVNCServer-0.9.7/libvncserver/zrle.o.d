@@ -1,6 +1,6 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/zrle.o: \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrle.c \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h \
+obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/zrle.o: \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrle.c \
+ jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -25,9 +25,9 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/alloca.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/strings.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/time.h \
@@ -69,15 +69,15 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/private.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleoutstream.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrletypes.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleencodetemplate.c \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/private.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleoutstream.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrletypes.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleencodetemplate.c \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zywrletemplate.c
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zywrletemplate.c
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfb.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
@@ -127,11 +127,11 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbproto.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbconfig.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/rfb/rfbint.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h:
 
@@ -215,16 +215,16 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/private.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/private.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleoutstream.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleoutstream.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrletypes.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrletypes.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleencodetemplate.c:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrleencodetemplate.c:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zywrletemplate.c:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/zywrletemplate.c:

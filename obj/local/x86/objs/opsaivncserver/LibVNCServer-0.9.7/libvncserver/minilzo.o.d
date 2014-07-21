@@ -1,7 +1,7 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/minilzo.o: \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/minilzo.c \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/minilzo.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/lzoconf.h \
+obj/local/x86/objs/opsaivncserver/LibVNCServer-0.9.7/libvncserver/minilzo.o: \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/minilzo.c \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/minilzo.h \
+ jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/lzoconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/limits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -36,9 +36,9 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/minilzo.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/minilzo.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/lzoconf.h:
+jni/opsai-vnc/LibVNCServer-0.9.7/libvncserver/lzoconf.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/limits.h:
 

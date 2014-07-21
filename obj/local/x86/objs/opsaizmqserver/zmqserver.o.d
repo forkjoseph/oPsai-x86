@@ -1,5 +1,4 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmqserver.o: \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmqserver.c \
+obj/local/x86/objs/opsaizmqserver/zmqserver.o: jni/opsai-zmq/zmqserver.c \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/config/features.h \
@@ -65,7 +64,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/sysconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/capability.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/include/zmq.h \
+ jni/opsai-zmq/zmq3.2.4/include/zmq.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -203,7 +202,7 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/include/zmq.h:
+jni/opsai-zmq/zmq3.2.4/include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h:
 

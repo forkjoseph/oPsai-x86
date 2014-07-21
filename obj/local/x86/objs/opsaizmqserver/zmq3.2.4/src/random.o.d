@@ -1,5 +1,5 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/random.o: \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/random.cpp \
+obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/random.o: \
+ jni/opsai-zmq/zmq3.2.4/src/random.cpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdlib.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/config/features.h \
@@ -38,7 +38,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_epilog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/unistd.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/select.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/time.h \
@@ -62,9 +62,9 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/sysconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/capability.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/random.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/clock.hpp
+ jni/opsai-zmq/zmq3.2.4/src/random.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/clock.hpp
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdlib.h:
 
@@ -142,7 +142,7 @@
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
+jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/unistd.h:
 
@@ -190,8 +190,8 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/pathconf.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/random.hpp:
+jni/opsai-zmq/zmq3.2.4/src/random.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
+jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/clock.hpp:
+jni/opsai-zmq/zmq3.2.4/src/clock.hpp:

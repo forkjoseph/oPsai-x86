@@ -1,8 +1,8 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/clock.o: \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/clock.cpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/clock.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
+obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/clock.o: \
+ jni/opsai-zmq/zmq3.2.4/src/clock.cpp \
+ jni/opsai-zmq/zmq3.2.4/src/clock.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdint.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stddef.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
@@ -23,10 +23,9 @@
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/_types.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/_types.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/config.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
+ jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/config.hpp jni/opsai-zmq/zmq3.2.4/src/err.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -71,11 +70,11 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/siginfo.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/siginfo.h
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/clock.hpp:
+jni/opsai-zmq/zmq3.2.4/src/clock.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
+jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
+jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdint.h:
 
@@ -117,13 +116,13 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/_types.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
+jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/config.hpp:
+jni/opsai-zmq/zmq3.2.4/src/config.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp:
+jni/opsai-zmq/zmq3.2.4/src/err.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
+jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h:
 

@@ -1,5 +1,4 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/screenshot/fb.o: \
- /home/josephlee/Development/opsai-x86/jni/screenshot/fb.c \
+obj/local/x86/objs/screenshot/fb.o: jni/screenshot/fb.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -50,10 +49,9 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/log.h \
+ jni/screenshot/log.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/fb.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/img_process.h
+ jni/screenshot/fb.h jni/screenshot/img_process.h
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
@@ -155,10 +153,10 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/log.h:
+jni/screenshot/log.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/fb.h:
+jni/screenshot/fb.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/img_process.h:
+jni/screenshot/img_process.h:

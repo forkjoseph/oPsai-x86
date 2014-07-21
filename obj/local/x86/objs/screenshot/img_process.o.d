@@ -1,5 +1,4 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/screenshot/img_process.o: \
- /home/josephlee/Development/opsai-x86/jni/screenshot/img_process.c \
+obj/local/x86/objs/screenshot/img_process.o: jni/screenshot/img_process.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -8,8 +7,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/../libpng/png.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/../libpng/pnglibconf.h \
+ jni/screenshot/../libpng/png.h jni/screenshot/../libpng/pnglibconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/setjmp.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/setjmp.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
@@ -31,7 +29,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/time.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/siginfo.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/siginfo.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/../libpng/pngconf.h \
+ jni/screenshot/../libpng/pngconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/limits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/limits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/limits.h \
@@ -43,9 +41,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/string.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/malloc.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/fb.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/img_process.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/log.h \
+ jni/screenshot/fb.h jni/screenshot/img_process.h jni/screenshot/log.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h:
@@ -64,9 +60,9 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/../libpng/png.h:
+jni/screenshot/../libpng/png.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/../libpng/pnglibconf.h:
+jni/screenshot/../libpng/pnglibconf.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/setjmp.h:
 
@@ -110,7 +106,7 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/siginfo.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/../libpng/pngconf.h:
+jni/screenshot/../libpng/pngconf.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/limits.h:
 
@@ -134,10 +130,10 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/fb.h:
+jni/screenshot/fb.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/img_process.h:
+jni/screenshot/img_process.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/log.h:
+jni/screenshot/log.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h:

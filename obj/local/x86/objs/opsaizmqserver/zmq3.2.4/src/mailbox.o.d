@@ -1,6 +1,6 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/mailbox.o: \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/mailbox.cpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/mailbox.hpp \
+obj/local/x86/objs/opsaizmqserver/zmq3.2.4/src/mailbox.o: \
+ jni/opsai-zmq/zmq3.2.4/src/mailbox.cpp \
+ jni/opsai-zmq/zmq3.2.4/src/mailbox.hpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stddef.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_cprolog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/config/features.h \
@@ -18,18 +18,17 @@
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/config/_native_headers.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_epilog.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/signaler.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/fd.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/config.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/command.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/platform.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/signaler.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/fd.hpp jni/opsai-zmq/zmq3.2.4/src/config.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/command.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/stdint.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdint.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/_types.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/_types.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ypipe.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/atomic_ptr.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/yqueue.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/ypipe.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/atomic_ptr.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/yqueue.hpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/stdlib.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/string.h \
@@ -48,8 +47,8 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/kernel.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/sysmacros.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
+ jni/opsai-zmq/zmq3.2.4/src/err.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
@@ -61,7 +60,7 @@
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdarg.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/assert.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/likely.hpp \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/socket.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h \
@@ -70,7 +69,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
- /home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/mutex.hpp \
+ jni/opsai-zmq/zmq3.2.4/src/mutex.hpp \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/pthread.h \
  /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_prolog.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/pthread.h \
@@ -96,7 +95,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sigcontext.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sched.h
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/mailbox.hpp:
+jni/opsai-zmq/zmq3.2.4/src/mailbox.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stddef.h:
 
@@ -132,17 +131,17 @@
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stl/_config_compat_post.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
+jni/opsai-zmq/zmq3.2.4/src/platform.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/signaler.hpp:
+jni/opsai-zmq/zmq3.2.4/src/signaler.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/fd.hpp:
+jni/opsai-zmq/zmq3.2.4/src/fd.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/config.hpp:
+jni/opsai-zmq/zmq3.2.4/src/config.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/command.hpp:
+jni/opsai-zmq/zmq3.2.4/src/command.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
+jni/opsai-zmq/zmq3.2.4/src/stdint.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdint.h:
 
@@ -150,11 +149,11 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/_types.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/ypipe.hpp:
+jni/opsai-zmq/zmq3.2.4/src/ypipe.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/atomic_ptr.hpp:
+jni/opsai-zmq/zmq3.2.4/src/atomic_ptr.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/yqueue.hpp:
+jni/opsai-zmq/zmq3.2.4/src/yqueue.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdlib.h:
 
@@ -192,9 +191,9 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/err.hpp:
+jni/opsai-zmq/zmq3.2.4/src/err.hpp:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
+jni/opsai-zmq/zmq3.2.4/src/../include/zmq.h:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/errno.h:
 
@@ -218,7 +217,7 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
+jni/opsai-zmq/zmq3.2.4/src/likely.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h:
 
@@ -236,7 +235,7 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
 
-/home/josephlee/Development/opsai-x86/jni/opsai-zmq/zmq3.2.4/src/mutex.hpp:
+jni/opsai-zmq/zmq3.2.4/src/mutex.hpp:
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/pthread.h:
 

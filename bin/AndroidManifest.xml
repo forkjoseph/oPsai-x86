@@ -7,6 +7,7 @@
     
     <application android:label="@string/app_name" >
         <activity android:name="MainActivity"
+            		android:icon="@drawable/opsai"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

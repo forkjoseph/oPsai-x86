@@ -1,7 +1,6 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/screenshot/screenshot-main.o: \
- /home/josephlee/Development/opsai-x86/jni/screenshot/screenshot-main.c \
- /home/josephlee/Development/opsai-x86/jni/screenshot/fb2png.h \
- /home/josephlee/Development/opsai-x86/jni/screenshot/log.h \
+obj/local/x86/objs/screenshot/screenshot-main.o: \
+ jni/screenshot/screenshot-main.c jni/screenshot/fb2png.h \
+ jni/screenshot/log.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -71,9 +70,9 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/fcntl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/fcntl.h
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/fb2png.h:
+jni/screenshot/fb2png.h:
 
-/home/josephlee/Development/opsai-x86/jni/screenshot/log.h:
+jni/screenshot/log.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/errno.h:
 

@@ -1,63 +1,77 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
+LIBVNCSERVER_ROOT:=./LibVNCServer-0.9.9
+
 LOCAL_MODULE:= opsaivncserver
 
-LOCAL_SRC_FILES:= \
-	LibVNCServer-0.9.7/libvncserver/main.c \
-	LibVNCServer-0.9.7/libvncserver/rfbserver.c \
-	LibVNCServer-0.9.7/libvncserver/rfbregion.c \
-	LibVNCServer-0.9.7/libvncserver/auth.c \
-	LibVNCServer-0.9.7/libvncserver/sockets.c \
-	LibVNCServer-0.9.7/libvncserver/stats.c \
-	LibVNCServer-0.9.7/libvncserver/corre.c \
-	LibVNCServer-0.9.7/libvncserver/hextile.c \
-	LibVNCServer-0.9.7/libvncserver/rre.c \
-	LibVNCServer-0.9.7/libvncserver/translate.c \
-	LibVNCServer-0.9.7/libvncserver/cutpaste.c \
-	LibVNCServer-0.9.7/libvncserver/httpd.c \
-	LibVNCServer-0.9.7/libvncserver/cursor.c \
-	LibVNCServer-0.9.7/libvncserver/font.c \
-	LibVNCServer-0.9.7/libvncserver/draw.c \
-	LibVNCServer-0.9.7/libvncserver/selbox.c \
-	LibVNCServer-0.9.7/libvncserver/d3des.c \
-	LibVNCServer-0.9.7/libvncserver/vncauth.c \
-	LibVNCServer-0.9.7/libvncserver/cargs.c \
-	LibVNCServer-0.9.7/libvncserver/minilzo.c \
-	LibVNCServer-0.9.7/libvncserver/ultra.c \
-	LibVNCServer-0.9.7/libvncserver/scale.c \
-	LibVNCServer-0.9.7/libvncserver/zlib.c \
-	LibVNCServer-0.9.7/libvncserver/zrle.c \
-	LibVNCServer-0.9.7/libvncserver/zrleoutstream.c \
-	LibVNCServer-0.9.7/libvncserver/zrlepalettehelper.c \
-	LibVNCServer-0.9.7/libvncserver/zywrletemplate.c \
-	LibVNCServer-0.9.7/libvncserver/tight.c \
-	opsaivncserver.c \
-	inputMethods/input.c \
-	suinput/suinput.c 
+LIBVNCSERVER_SRC_FILES:= \
+	$(LIBVNCSERVER_ROOT)/libvncserver/main.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/rfbserver.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/rfbregion.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/auth.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/sockets.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/stats.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/corre.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/rfbssl_openssl.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/rfbcrypto_openssl.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/hextile.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/rre.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/translate.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/cutpaste.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/httpd.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/cursor.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/font.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/draw.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/websockets.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/selbox.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/cargs.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/ultra.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/scale.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/zlib.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/zrle.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/zrleoutstream.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/zrlepalettehelper.c \
+	$(LIBVNCSERVER_ROOT)/libvncserver/tight.c \
+	$(LIBVNCSERVER_ROOT)/common/d3des.c \
+	$(LIBVNCSERVER_ROOT)/common/vncauth.c \
+	$(LIBVNCSERVER_ROOT)/common/minilzo.c \
+	$(LIBVNCSERVER_ROOT)/common/zywrletemplate.c \
+	$(LIBVNCSERVER_ROOT)/common/turbojpeg.c
+
+LOCAL_CFLAGS  +=  -Wall \
+				-O3 \
+				-DLIBVNCSERVER_WITH_WEBSOCKETS \
+				-DLIBVNCSERVER_HAVE_LIBPNG \
+				-DLIBVNCSERVER_HAVE_ZLIB \
+				-DLIBVNCSERVER_HAVE_LIBJPEG
+
+LOCAL_SRC_FILES +=  $(LIBVNCSERVER_SRC_FILES)\
+					opsaivncserver.c \
+					inputMethods/input.c \
+					suinput/suinput.c 
 
 
 LOCAL_LDLIBS +=  -llog -lz -ldl -landroid
-LOCAL_CFLAGS += -Wall \
-		-O3 \
-		-DLIBVNCSERVER_HAVE_ZLIB \
-		-DLIBVNCSERVER_HAVE_LIBPNG \
-		-DLIBVNCSERVER_HAVE_LIBJPEG
+
 									
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH) \
 	$(LOCAL_PATH)/../screenMethods \
-	$(LOCAL_PATH)/LibVNCServer-0.9.7/libvncserver \
-	$(LOCAL_PATH)/LibVNCServer-0.9.7 \
-	$(LOCAL_PATH)/LibVNCServer-0.9.7/common \
-	$(LOCAL_PATH)/LibVNCServer-0.9.7/libvncserver \
-	$(LOCAL_PATH)/LibVNCServer-0.9.7/rfb \
+	$(LOCAL_PATH)/LibVNCServer-0.9.9/libvncserver \
+	$(LOCAL_PATH)/LibVNCServer-0.9.9 \
+	$(LOCAL_PATH)/LibVNCServer-0.9.9/common \
+	$(LOCAL_PATH)/LibVNCServer-0.9.9/libvncserver \
+	$(LOCAL_PATH)/LibVNCServer-0.9.9/rfb \
 	$(LOCAL_PATH)/../libpng \
 	$(LOCAL_PATH)/../jpeg \
 	$(LOCAL_PATH)/../jpeg-turbo \
 	$(LOCAL_PATH)/../screenshot \
 	$(LOCAL_PATH)/inputMethods \
-	$(LOCAL_PATH)/suinput 
+	$(LOCAL_PATH)/suinput \
+	$(LOCAL_PATH)/../openssl/include \
 	
-LOCAL_STATIC_LIBRARIES := libjpeg libpng
+	
+LOCAL_STATIC_LIBRARIES := libjpeg libpng libssl_static libcrypto_static 
 
 include $(BUILD_EXECUTABLE)
+

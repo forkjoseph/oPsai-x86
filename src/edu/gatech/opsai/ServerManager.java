@@ -132,7 +132,7 @@ public class ServerManager extends Service {
 			}
 			// dont show password on logcat
 			log("Starting " + droidvncserver_exec);
-
+			showRunning();
 		} catch (IOException e) {
 			log("startServer():" + e.getMessage());
 		} catch (Exception e) {
@@ -179,6 +179,7 @@ public class ServerManager extends Service {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			dismissRunning();
 		}
 	}
 	
@@ -276,8 +277,73 @@ public class ServerManager extends Service {
 			}
 		});
 	}
+	
+	@SuppressWarnings("deprecation")
+	public void showRunning() {
+		String ns = Context.NOTIFICATION_SERVICE;
+		NotificationManager mNotificationManager = (NotificationManager) getSystemService(ns);
 
+		int icon = R.drawable.opsai;
+		CharSequence tickerText = "oPsai VNC Server is currently running";
+		long when = System.currentTimeMillis();
 
+		Notification notification = new Notification(icon, tickerText, when);
 
+		Context context = getApplicationContext();
+		CharSequence contentTitle = "oPsai VNC Server";
+		CharSequence contentText = "oPsai VNC Server daemon is currently running";
+		Intent notificationIntent = new Intent();
+		PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, 0);
+
+		notification.setLatestEventInfo(context, contentTitle, contentText,	contentIntent);
+		notification.flags = Notification.FLAG_ONGOING_EVENT;
+		mNotificationManager.notify(5901, notification);
+	}
+	
+	void dismissRunning() {
+		String ns = Context.NOTIFICATION_SERVICE;
+		NotificationManager mNotificationManager = (NotificationManager) getSystemService(ns);
+		mNotificationManager.cancel(5901);
+	}
+	
+	
+	public void showClientConnected(String c) {
+		String ns = Context.NOTIFICATION_SERVICE;
+		NotificationManager mNotificationManager = (NotificationManager) getSystemService(ns);
+
+		int icon = R.drawable.opsai;
+		CharSequence tickerText = c + " connected to VNC server";
+		long when = System.currentTimeMillis();
+
+		Notification notification = new Notification(icon, tickerText, when);
+
+		Context context = getApplicationContext();
+		CharSequence contentTitle = "oPsai VNC Server";
+		CharSequence contentText = "Client Connected from " + c;
+		Intent notificationIntent = new Intent();
+		PendingIntent contentIntent = PendingIntent.getActivity(
+				getApplicationContext(), 0, notificationIntent, 0);
+
+		notification.setLatestEventInfo(context, contentTitle, contentText,
+				contentIntent);
+
+		mNotificationManager.notify(5901, notification);
+
+		// lets see if we should keep screen on
+		if (preferences.getBoolean("screenturnoff", false)) {
+			PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+			wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "VNC");
+			wakeLock.acquire();
+		}
+	}
+
+	void showClientDisconnected() {
+		String ns = Context.NOTIFICATION_SERVICE;
+		NotificationManager mNotificationManager = (NotificationManager) getSystemService(ns);
+		mNotificationManager.cancel(5901);
+
+//		if (wakeLock != null && wakeLock.isHeld())
+//			wakeLock.release();
+	}
 	
 }

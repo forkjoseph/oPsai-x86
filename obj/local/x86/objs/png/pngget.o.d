@@ -1,6 +1,4 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/png/pngget.o: \
- /home/josephlee/Development/opsai-x86/jni/libpng/pngget.c \
- /home/josephlee/Development/opsai-x86/jni/libpng/pngpriv.h \
+obj/local/x86/objs/png/pngget.o: jni/libpng/pngget.c jni/libpng/pngpriv.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -24,8 +22,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/kernel.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/sysmacros.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
- /home/josephlee/Development/opsai-x86/jni/libpng/png.h \
- /home/josephlee/Development/opsai-x86/jni/libpng/pnglibconf.h \
+ jni/libpng/png.h jni/libpng/pnglibconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/setjmp.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/setjmp.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/time.h \
@@ -33,7 +30,7 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/time.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/siginfo.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/siginfo.h \
- /home/josephlee/Development/opsai-x86/jni/libpng/pngconf.h \
+ jni/libpng/pngconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/limits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/limits.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/limits.h \
@@ -43,14 +40,13 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/page.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/page_32.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
- /home/josephlee/Development/opsai-x86/jni/libpng/pnginfo.h \
- /home/josephlee/Development/opsai-x86/jni/libpng/pngstruct.h \
+ jni/libpng/pnginfo.h jni/libpng/pngstruct.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zconf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/math.h \
- /home/josephlee/Development/opsai-x86/jni/libpng/pngdebug.h
+ jni/libpng/pngdebug.h
 
-/home/josephlee/Development/opsai-x86/jni/libpng/pngpriv.h:
+jni/libpng/pngpriv.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdlib.h:
 
@@ -98,9 +94,9 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h:
 
-/home/josephlee/Development/opsai-x86/jni/libpng/png.h:
+jni/libpng/png.h:
 
-/home/josephlee/Development/opsai-x86/jni/libpng/pnglibconf.h:
+jni/libpng/pnglibconf.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/setjmp.h:
 
@@ -116,7 +112,7 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/siginfo.h:
 
-/home/josephlee/Development/opsai-x86/jni/libpng/pngconf.h:
+jni/libpng/pngconf.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/limits.h:
 
@@ -136,9 +132,9 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
-/home/josephlee/Development/opsai-x86/jni/libpng/pnginfo.h:
+jni/libpng/pnginfo.h:
 
-/home/josephlee/Development/opsai-x86/jni/libpng/pngstruct.h:
+jni/libpng/pngstruct.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/zlib.h:
 
@@ -146,4 +142,4 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/math.h:
 
-/home/josephlee/Development/opsai-x86/jni/libpng/pngdebug.h:
+jni/libpng/pngdebug.h:

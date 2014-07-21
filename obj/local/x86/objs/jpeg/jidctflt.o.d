@@ -1,7 +1,5 @@
-/home/josephlee/Development/opsai-x86/obj/local/x86/objs/jpeg/jidctflt.o: \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jidctflt.c \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jinclude.h \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jconfig.h \
+obj/local/x86/objs/jpeg/jidctflt.o: jni/jpeg/jidctflt.c \
+ jni/jpeg/jinclude.h jni/jpeg/jconfig.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdlib.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -26,15 +24,12 @@
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/sysmacros.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/memory.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jpeglib.h \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jmorecfg.h \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jpegint.h \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jerror.h \
- /home/josephlee/Development/opsai-x86/jni/jpeg/jdct.h
+ jni/jpeg/jpeglib.h jni/jpeg/jmorecfg.h jni/jpeg/jpegint.h \
+ jni/jpeg/jerror.h jni/jpeg/jdct.h
 
-/home/josephlee/Development/opsai-x86/jni/jpeg/jinclude.h:
+jni/jpeg/jinclude.h:
 
-/home/josephlee/Development/opsai-x86/jni/jpeg/jconfig.h:
+jni/jpeg/jconfig.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdlib.h:
 
@@ -84,12 +79,12 @@
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
 
-/home/josephlee/Development/opsai-x86/jni/jpeg/jpeglib.h:
+jni/jpeg/jpeglib.h:
 
-/home/josephlee/Development/opsai-x86/jni/jpeg/jmorecfg.h:
+jni/jpeg/jmorecfg.h:
 
-/home/josephlee/Development/opsai-x86/jni/jpeg/jpegint.h:
+jni/jpeg/jpegint.h:
 
-/home/josephlee/Development/opsai-x86/jni/jpeg/jerror.h:
+jni/jpeg/jerror.h:
 
-/home/josephlee/Development/opsai-x86/jni/jpeg/jdct.h:
+jni/jpeg/jdct.h:
