@@ -31,7 +31,6 @@ public class ServerManager extends Service {
 	private static PowerManager.WakeLock wakeLock = null;
 
 	boolean serverOn = false;
-//	public static String SOCKET_ADDRESS = "org.onaips.vnc.gui";
 	SocketListener serverConnection = null;
 
 	private String rHost = null;
@@ -98,21 +97,23 @@ public class ServerManager extends Service {
 			String files_dir = getFilesDir().getAbsolutePath();
 			
 			//our exec file is disguised as a library so it will get packed to lib folder according to cpu_abi
-			String droidvncserver_exec="/system/lib/opsaivncserver.so";
-			File f=new File (droidvncserver_exec);
+			String vncserver_path = "/system/lib/opsaivncserver.so";
+//			String droidvncserver_exec="/data/data/edu.gatech.opsai/lib/libopsaivncserver.so"; // for final release
+
+			File f=new File (vncserver_path);
 			if (!f.exists())
 			{
-				String e="Error! Could not find daemon file, " + droidvncserver_exec;
+				String e="Error! Could not find daemon file, " + vncserver_path;
 				showTextOnScreen(e);
 				log(e);
 				return;
 			}
 			
 			
-			Runtime.getRuntime().exec("chmod 777 " + droidvncserver_exec);
+			Runtime.getRuntime().exec("chmod 777 " + vncserver_path);
  
-			String permission_string="chmod 777 " + droidvncserver_exec;
-			String server_string= droidvncserver_exec;
+			String permission_string="chmod 777 " + vncserver_path;
+			String server_string= vncserver_path;
  
 			boolean root=preferences.getBoolean("asroot",true);
  
@@ -131,7 +132,7 @@ public class ServerManager extends Service {
 				Runtime.getRuntime().exec(server_string,null,new File(files_dir));
 			}
 			// dont show password on logcat
-			log("Starting " + droidvncserver_exec);
+			log("Starting " + vncserver_path);
 			showRunning();
 		} catch (IOException e) {
 			log("startServer():" + e.getMessage());
@@ -161,6 +162,8 @@ public class ServerManager extends Service {
 	void killServer() {
 		c = new CommandLineUtil();
 		String result = c.runCommand("pgrep -o /system/lib/opsaivncserver.so");
+//		String result = c.runCommand("pgrep -o /data/data/edu.gatech.opsai/lib/libopsaivncserver.so"); // for final release
+
 		log("Trying to kill current process");
 		String PID = result;
 		log("Killing " + PID);
@@ -185,7 +188,9 @@ public class ServerManager extends Service {
 	
 	public boolean isServerRunning() {
 		c = new CommandLineUtil();
-		String result = c.runCommand("pgrep -o /system/lib/opsaivncserver.so");
+		String result = c.runCommand("pgrep -o /system/lib/opsaivncserver.so"); // for DEBUG
+//		String result = c.runCommand("pgrep -o /data/data/edu.gatech.opsai/lib/libopsaivncserver.so"); // for final release
+
 		if (result.equals("")) {
 			log("Process is not running currently");
 			return false;
@@ -205,53 +210,6 @@ public class ServerManager extends Service {
 
 		@Override
 		public void run() {
-		/*	try {
-				server = new DatagramSocket(13131);
-				log("Listening...");
-
-				while (!finished) {
-					DatagramPacket answer = new DatagramPacket(new byte[1024],
-							1024);
-					server.receive(answer);
-
-					String resp = new String(answer.getData());
-					resp = resp.substring(0, answer.getLength());
-
-					log("RECEIVED " + resp);  
-
-					if (resp.length() > 5
-							&& resp.substring(0, 6).equals("~CLIP|")) {
-						resp = resp.substring(7, resp.length() - 1);
-						ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-
-						clipboard.setText(resp.toString());
-					} else if (resp.length() > 6
-							&& resp.substring(0, 6).equals("~SHOW|")) {
-						resp = resp.substring(6, resp.length() - 1);
-						showTextOnScreen(resp);
-					} else if (resp.length() > 15
-							&& (resp.substring(0, 15).equals("~SERVERSTARTED|") || resp
-									.substring(0, 15).equals("~SERVERSTOPPED|"))) {
-						Intent intent = new Intent("org.onaips.vnc.ACTIVITY_UPDATE");
-						sendBroadcast(intent);
-					} 
-					else if (preferences.getBoolean("notifyclient", true)) {
-						if (resp.length() > 10
-								&& resp.substring(0, 11).equals("~CONNECTED|")) {
-							resp = resp.substring(11, resp.length() - 1);
-							showClientConnected(resp);
-						} else if (resp.length() > 13
-								&& resp.substring(0, 14).equals(
-								"~DISCONNECTED|")) {
-							showClientDisconnected();
-						}
-					} else {
-						log("Received: " + resp);
-					}
-				}
-			} catch (IOException e) {
-				log("ERROR em SOCKETLISTEN " + e.getMessage());
-			}*/
 		}
 	}
 
@@ -260,7 +218,6 @@ public class ServerManager extends Service {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		//showTextOnScreen("Droid VNC server service killed...");
 	}
 
 	static void writeCommand(OutputStream os, String command) throws Exception {
@@ -269,11 +226,8 @@ public class ServerManager extends Service {
 
 	public void showTextOnScreen(final String t) {
 		handler.post(new Runnable() {
-
 			public void run() {
-				// TODO Auto-generated method stub
-				Toast.makeText(getApplicationContext(), t, Toast.LENGTH_LONG)
-				.show();
+				Toast.makeText(getApplicationContext(), t, Toast.LENGTH_LONG).show();
 			}
 		});
 	}
@@ -307,6 +261,7 @@ public class ServerManager extends Service {
 	}
 	
 	
+	// not sure yet .... 
 	public void showClientConnected(String c) {
 		String ns = Context.NOTIFICATION_SERVICE;
 		NotificationManager mNotificationManager = (NotificationManager) getSystemService(ns);
