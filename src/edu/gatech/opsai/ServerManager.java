@@ -246,7 +246,7 @@ public class ServerManager extends Service {
 		Context context = getApplicationContext();
 		CharSequence contentTitle = "oPsai VNC Server";
 		CharSequence contentText = "oPsai VNC Server daemon is currently running";
-		Intent notificationIntent = new Intent();
+		Intent notificationIntent = new Intent(this, MainActivity.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, 0);
 
 		notification.setLatestEventInfo(context, contentTitle, contentText,	contentIntent);

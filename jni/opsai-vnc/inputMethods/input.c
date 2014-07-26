@@ -233,66 +233,64 @@ void ptrEvent(int buttonMask, int x, int y, rfbClientPtr cl)
 {
 
   static int leftClicked=0,rightClicked=0,middleClicked=0;
+  static int oldX = 0, oldY = 0;
+  printf("Got ptr Event for %d, %d, %d, oldX: %d, oldY: %d\n", buttonMask, x, y, oldX, oldY);
 
   if ( inputfd == -1 )
     return;
-  
+
 //  setIdle(0);
-  transformTouchCoordinates(&x,&y,cl->screen->width,cl->screen->height);
+//  transformTouchCoordinates(&x,&y,cl->screen->width,cl->screen->height);
 
-  if((buttonMask & 1)&& leftClicked) {//left btn clicked and moving
-                                      static int i=0;
-                                      i=i+1;
-
-                                      if (i%10==1)//some tweak to not report every move event
-                                      {
-                                        suinput_write(inputfd, EV_ABS, ABS_X, x);
-                                        suinput_write(inputfd, EV_ABS, ABS_Y, y);
-                                        suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-                                      }
-                                     }
-  else if (buttonMask & 1)//left btn clicked
-  {
-    leftClicked=1;
-
-    suinput_write(inputfd, EV_ABS, ABS_X, x);
-    suinput_write(inputfd, EV_ABS, ABS_Y, y);
-    suinput_write(inputfd,EV_KEY,BTN_TOUCH,1);
-    suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-
-
-  }
-  else if (leftClicked)//left btn released
-  {
-    leftClicked=0;
-    suinput_write(inputfd, EV_ABS, ABS_X, x);
-    suinput_write(inputfd, EV_ABS, ABS_Y, y);
-    suinput_write(inputfd,EV_KEY,BTN_TOUCH,0);
-    suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+  if ((buttonMask | 1) && !leftClicked){
+	  oldX = x; // 3.2
+	  oldY = y; // 5.12
+	suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
+	suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
+	suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
+	suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
   }
 
-  if (buttonMask & 4)//right btn clicked
-  {
-    rightClicked=1;
-    suinput_press(inputfd,158); //back key
-  }
-  else if (rightClicked)//right button released
-  {
-    rightClicked=0;
-    suinput_release(inputfd,158);
-  }
+	if ((buttonMask & 1) && leftClicked) { //left btn clicked and moving
+		static int i = 0;
+		i = i + 1;
+		printf("left btn clicked and moving\n");
+		if (i % 10 == 1){ //some tweak to not report every move event
+			suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
+			suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
+			suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+		}
+	} else if (buttonMask & 1) { //left btn clicked
+		leftClicked = 1;
+		suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
+		suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
+		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
+		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
 
-  if (buttonMask & 2)//mid btn clicked
-  {
-    middleClicked=1;
-    suinput_press( inputfd,KEY_END);
-  }
-    else if (middleClicked)// mid btn released
-    {
-      middleClicked=0;
-      suinput_release( inputfd,KEY_END);
-    }
-    }
+	} else if (leftClicked) { //left btn released
+		leftClicked = 0;
+		suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
+		suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
+		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 0);
+		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+	}
+
+	if (buttonMask & 4) {//right btn clicked
+		rightClicked = 1;
+		suinput_press(inputfd, 158); //back key
+	} else if (rightClicked) {//right button released
+		rightClicked = 0;
+		suinput_release(inputfd, 158);
+	}
+
+	if (buttonMask & 2) {//mid btn clicked
+		middleClicked = 1;
+		suinput_press(inputfd, KEY_END);
+	} else if (middleClicked) {// mid btn released
+		middleClicked = 0;
+		suinput_release(inputfd, KEY_END);
+	}
+}
 
 
 inline void transformTouchCoordinates(int *x, int *y,int width,int height)

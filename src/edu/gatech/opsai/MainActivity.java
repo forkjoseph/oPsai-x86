@@ -1,13 +1,14 @@
 package edu.gatech.opsai;
 
+
 import edu.gatech.opsai.ServerManager;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.ServiceConnection;
-import android.media.MediaRouter;
-import android.media.MediaRouter.RouteInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -25,20 +26,19 @@ public class MainActivity extends Activity
 	private Button rButton, kButton;
 	private TextView ipTV;
 	private ServerManager s;
+	private BroadcastReceiver mBroadcastReceiver;
 
 	@Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        MediaRouter mr = (MediaRouter)getSystemService(Context.MEDIA_ROUTER_SERVICE);
-        RouteInfo ri = mr.getSelectedRoute(MediaRouter.ROUTE_TYPE_LIVE_AUDIO);
-        D(ri.getName().toString());
         rButton = (Button) findViewById(R.id.runserver);
         kButton = (Button) findViewById(R.id.killserver);
         ipTV = (TextView) findViewById(R.id.iptextview);
         doBindService();
 
+        // manual debug mode
         rButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
             	String result = "Running the server :)";
@@ -69,6 +69,24 @@ public class MainActivity extends Activity
 		String ipAddress = Formatter.formatIpAddress(ip);
         ipTV.setText("Address: " + ipAddress + "\nType \"vncviewer " + ipAddress + ":5901 -compresslevel 9 \"");
     }
+	
+	protected void onResume() {
+		super.onResume();
+		IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
+		filter.addAction(Intent.ACTION_SCREEN_OFF);
+		mBroadcastReceiver = new WakeUpReceiver();
+        registerReceiver(mBroadcastReceiver, filter);
+	}
+	
+	@Override
+	protected void onStop() {
+		super.onStop();
+	}
+	
+	protected void onDestroy() {
+		super.onDestroy();
+		unregisterReceiver(mBroadcastReceiver);
+	}
 
     void doBindService() {
 		bindService(new Intent(this, ServerManager.class), mConnection, Context.BIND_AUTO_CREATE);
@@ -83,6 +101,8 @@ public class MainActivity extends Activity
 		}
 	};
 	
+	
+    
     public void D(String x) {
     	final String LOG_TAG = "OPSAI - MainActivity";
     	Log.d(LOG_TAG, x);

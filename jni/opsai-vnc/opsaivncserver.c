@@ -1,6 +1,6 @@
 #include "opsaivncserver.h"
 
-#define NUM_CPU 800
+#define NUM_CPU 4
 static unsigned long time_val;
 
 void private_fb_create() {

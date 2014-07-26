@@ -70,7 +70,43 @@ obj/local/x86/objs/opsaizmqserver/zmqserver.o: jni/opsai-zmq/zmqserver.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/errno.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h \
- /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h \
+ jni/opsai-zmq/zmqserver.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/socket.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
+ jni/opsai-zmq/zmq3.2.4/src/ifaddrs.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ioctl.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/ioctl.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/ioctl.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/ioctls.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/termbits.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl_compat.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/endian.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/endian.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/endian.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/byteorder.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/little_endian.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/swab.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/generic.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/net/if.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/if.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h \
+ /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/assert.h \
+ /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h
 
 /home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/stdio.h:
 
@@ -215,3 +251,75 @@ jni/opsai-zmq/zmq3.2.4/include/zmq.h:
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/errno-base.h:
+
+jni/opsai-zmq/zmqserver.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netdb.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/socket.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
+
+jni/opsai-zmq/zmq3.2.4/src/ifaddrs.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ioctl.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/ioctl.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm-generic/ioctl.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/ioctls.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/termbits.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl_compat.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/endian.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/endian.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/machine/endian.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/byteorder.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/little_endian.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/swab.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/byteorder/generic.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/in6.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ipv6.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/netinet/in6.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/net/if.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/if.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h:
+
+/home/josephlee/Development/android-ndk-r9d/sources/cxx-stl/stlport/stlport/assert.h:
+
+/home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/../include/assert.h:

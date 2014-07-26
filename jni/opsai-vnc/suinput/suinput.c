@@ -33,8 +33,7 @@ char* UINPUT_FILEPATHS[] = {
 };
 #define UINPUT_FILEPATHS_COUNT (sizeof(UINPUT_FILEPATHS) / sizeof(char*))
 
-int suinput_write(int uinput_fd,
-                  uint16_t type, uint16_t code, int32_t value)
+int suinput_write(int uinput_fd,uint16_t type, uint16_t code, int32_t value)
 {
     struct input_event event;
     memset(&event, 0, sizeof(event));
@@ -64,8 +63,10 @@ int suinput_open(const char* device_name, const struct input_id* id)
 
     for (i = 0; i < UINPUT_FILEPATHS_COUNT; ++i) {
         uinput_fd = open(UINPUT_FILEPATHS[i], O_WRONLY | O_NONBLOCK);
-        if (uinput_fd != -1)
-            break;
+        if (uinput_fd != -1) {
+        	printf("Input %s opened\n", UINPUT_FILEPATHS[i]);
+        	break;
+        }
     }
 
     if (uinput_fd == -1)
@@ -82,7 +83,7 @@ int suinput_open(const char* device_name, const struct input_id* id)
 //     /* Key and button repetition events */
      if (ioctl(uinput_fd, UI_SET_EVBIT, EV_REP) == -1)
          goto err;
-//     
+//
 //     /* Relative pointer motions */
 //     if (ioctl(uinput_fd, UI_SET_EVBIT, EV_REL) == -1)
 //         goto err;
@@ -127,13 +128,15 @@ int suinput_open(const char* device_name, const struct input_id* id)
     user_dev.id.version = id->version;
 
     //minor tweak to support ABSolute events
-    user_dev.absmin[ABS_X] = -2047;
-    user_dev.absmax[ABS_X] = 2048;
+//    user_dev.absmin[ABS_X] = -2047;
+    user_dev.absmin[ABS_X] = 0;
+
+    user_dev.absmax[ABS_X] = 4095;
     user_dev.absfuzz[ABS_X] = 0;
     user_dev.absflat[ABS_X] = 0;
 
-    user_dev.absmin[ABS_Y] = -2047;
-    user_dev.absmax[ABS_Y] = 2048;
+    user_dev.absmin[ABS_Y] = 0;
+    user_dev.absmax[ABS_Y] = 4095;
     user_dev.absfuzz[ABS_Y] = 0;
     user_dev.absflat[ABS_Y] = 0;
 
