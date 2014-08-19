@@ -93,4 +93,6 @@ int suinput_release(int uinput_fd, uint16_t code);
 */
 int suinput_click(int uinput_fd, uint16_t code);
 
+int ptr_abs(int fd, int32_t x, int32_t y);
+
 #endif /* SUINPUT_H */

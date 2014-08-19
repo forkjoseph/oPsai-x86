@@ -33,7 +33,7 @@ char* UINPUT_FILEPATHS[] = {
 };
 #define UINPUT_FILEPATHS_COUNT (sizeof(UINPUT_FILEPATHS) / sizeof(char*))
 
-int suinput_write(int uinput_fd,uint16_t type, uint16_t code, int32_t value)
+int suinput_write(int uinput_fd, uint16_t type, uint16_t code, int32_t value)
 {
     struct input_event event;
     memset(&event, 0, sizeof(event));
@@ -46,8 +46,14 @@ int suinput_write(int uinput_fd,uint16_t type, uint16_t code, int32_t value)
     return 0;
 }
 
-int suinput_write_syn(int uinput_fd,
-                             uint16_t type, uint16_t code, int32_t value)
+int ptr_abs(int fd, int32_t x, int32_t y) {
+	printf("%15s : %d, %d\n", "Ioctl", x, y);
+	if (suinput_write(fd, EV_ABS, ABS_X, x) != 0)
+		return -1;
+	return suinput_write(fd, EV_ABS, ABS_Y, y);
+}
+
+int suinput_write_syn(int uinput_fd, uint16_t type, uint16_t code, int32_t value)
 {
     if (suinput_write(uinput_fd, type, code, value))
         return -1;
@@ -79,7 +85,7 @@ int suinput_open(const char* device_name, const struct input_id* id)
     /* Key and button events */
      if (ioctl(uinput_fd, UI_SET_EVBIT, EV_KEY) == -1)
          goto err;
-// 
+//
 //     /* Key and button repetition events */
      if (ioctl(uinput_fd, UI_SET_EVBIT, EV_REP) == -1)
          goto err;
@@ -128,15 +134,13 @@ int suinput_open(const char* device_name, const struct input_id* id)
     user_dev.id.version = id->version;
 
     //minor tweak to support ABSolute events
-//    user_dev.absmin[ABS_X] = -2047;
     user_dev.absmin[ABS_X] = 0;
-
-    user_dev.absmax[ABS_X] = 4095;
+    user_dev.absmax[ABS_X] = 1280;
     user_dev.absfuzz[ABS_X] = 0;
     user_dev.absflat[ABS_X] = 0;
 
     user_dev.absmin[ABS_Y] = 0;
-    user_dev.absmax[ABS_Y] = 4095;
+    user_dev.absmax[ABS_Y] = 800;
     user_dev.absfuzz[ABS_Y] = 0;
     user_dev.absflat[ABS_Y] = 0;
 

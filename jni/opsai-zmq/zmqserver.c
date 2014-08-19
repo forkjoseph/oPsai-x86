@@ -27,7 +27,8 @@ int main (int argc, char const *argv[]) {
 	int s_port;
 	s_port = 30332;
 
-	// printf("Sending echo to %s\n", (char*)server_addr);
+    
+    // printf("Sending echo to %s\n", (char*)server_addr);
 	struct sockaddr_in si_server;
 	int sockfd;
 

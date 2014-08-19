@@ -56,6 +56,10 @@ void initInput()
 //    sendMsgToGui("~SHOW|Cannot create virtual input device!\n");
     //  exit(EXIT_FAILURE); do not exit, so we still can see the framebuffer
   }
+  ptr_abs(inputfd, 0, 0);
+  suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
+  suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+
 }
 
 
@@ -242,16 +246,16 @@ void ptrEvent(int buttonMask, int x, int y, rfbClientPtr cl)
 //  setIdle(0);
 //  transformTouchCoordinates(&x,&y,cl->screen->width,cl->screen->height);
 
-  if ((buttonMask | 1) && !leftClicked){
+  /*if ((buttonMask | 1) && !leftClicked){
 	  oldX = x; // 3.2
 	  oldY = y; // 5.12
 	suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
 	suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
 	suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
 	suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-  }
+  }*/
 
-	if ((buttonMask & 1) && leftClicked) { //left btn clicked and moving
+  /*if ((buttonMask & 1) && leftClicked) { //left btn clicked and moving
 		static int i = 0;
 		i = i + 1;
 		printf("left btn clicked and moving\n");
@@ -260,20 +264,53 @@ void ptrEvent(int buttonMask, int x, int y, rfbClientPtr cl)
 			suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
 			suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
 		}
-	} else if (buttonMask & 1) { //left btn clicked
+	} else */
+
+//  if (oldX != x && oldY != y ) {
+	static int i = 0;
+	i = i + 1;
+	int check = 0;
+	check = ptr_abs(inputfd, x, y);
+	if (check != 0 )
+		printf("Failed at %d, %d\n", x,y);
+
+	oldX = x;
+	oldY = y;
+
+//	check = suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
+	suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+
+	if ((buttonMask & 1) != 1){
+		suinput_write(inputfd, EV_KEY, BTN_TOUCH, buttonMask);
+		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+	}else {
+		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
+		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+	}
+
+	if (oldX == x && oldY == y && buttonMask == 0) // the end of one touch
+		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+
+
+//  }
+  	/* if (buttonMask & 1) { //left btn clicked
 		leftClicked = 1;
-		suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
-		suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
+		ptr_abs(inputfd, x, y);
+		printf("left btn clicked\n");
+		oldX = x;
+		oldY = y;
 		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
 		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
 
 	} else if (leftClicked) { //left btn released
 		leftClicked = 0;
-		suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
-		suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
+		ptr_abs(inputfd, x, y);
+		printf("left btn released\n");
+		oldX = x;
+		oldY = y;
 		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 0);
 		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-	}
+	} */
 
 	if (buttonMask & 4) {//right btn clicked
 		rightClicked = 1;
