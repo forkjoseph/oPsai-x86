@@ -47,10 +47,25 @@ int suinput_write(int uinput_fd, uint16_t type, uint16_t code, int32_t value)
 }
 
 int ptr_abs(int fd, int32_t x, int32_t y) {
-	printf("%15s : %d, %d\n", "Ioctl", x, y);
-	if (suinput_write(fd, EV_ABS, ABS_X, x) != 0)
+	printf("%15s : %d, %d\n", "Write", x, y);
+	if (suinput_write(fd, EV_ABS, ABS_X, x))
 		return -1;
-	return suinput_write(fd, EV_ABS, ABS_Y, y);
+	if (suinput_write(fd, EV_ABS, ABS_Y, y))
+		return -1;
+	return suinput_write(fd, EV_KEY, BTN_TOUCH, 1);
+}
+
+int ptr_abs_click(int fd, int32_t x, int32_t y, int buttonMask) {
+	//Down = 1 & Up = 0
+	printf("%15s : %d, %d, %d\n", "Write", x, y, buttonMask);
+	if (suinput_write(fd, EV_KEY, BTN_TOUCH, buttonMask))
+		return -1;
+	suinput_write(fd, EV_SYN, SYN_REPORT, 0);
+	if (suinput_write(fd, EV_ABS, ABS_X, x))
+		return -1;
+	if (suinput_write(fd, EV_ABS, ABS_Y, y))
+		return -1;
+	return 	suinput_write(fd, EV_SYN, SYN_REPORT, 0);
 }
 
 int suinput_write_syn(int uinput_fd, uint16_t type, uint16_t code, int32_t value)
@@ -59,6 +74,10 @@ int suinput_write_syn(int uinput_fd, uint16_t type, uint16_t code, int32_t value
         return -1;
     return suinput_write(uinput_fd, EV_SYN, SYN_REPORT, 0);
 }
+
+static int touchfd = -1;
+static int xmin, xmax;
+static int ymin, ymax;
 
 int suinput_open(const char* device_name, const struct input_id* id)
 {
@@ -77,8 +96,6 @@ int suinput_open(const char* device_name, const struct input_id* id)
 
     if (uinput_fd == -1)
         return -1;
-
-
 
     /* Set device to handle following types of events: */
 
@@ -134,13 +151,13 @@ int suinput_open(const char* device_name, const struct input_id* id)
     user_dev.id.version = id->version;
 
     //minor tweak to support ABSolute events
-    user_dev.absmin[ABS_X] = 0;
-    user_dev.absmax[ABS_X] = 1280;
+    user_dev.absmin[ABS_X] = -2047;
+    user_dev.absmax[ABS_X] = 2048;
     user_dev.absfuzz[ABS_X] = 0;
     user_dev.absflat[ABS_X] = 0;
 
-    user_dev.absmin[ABS_Y] = 0;
-    user_dev.absmax[ABS_Y] = 800;
+    user_dev.absmin[ABS_Y] = -2047;
+    user_dev.absmax[ABS_Y] = 2048;
     user_dev.absfuzz[ABS_Y] = 0;
     user_dev.absflat[ABS_Y] = 0;
 

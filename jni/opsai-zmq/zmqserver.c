@@ -27,7 +27,7 @@ int main (int argc, char const *argv[]) {
 	int s_port;
 	s_port = 30332;
 
-    
+
     // printf("Sending echo to %s\n", (char*)server_addr);
 	struct sockaddr_in si_server;
 	int sockfd;
@@ -41,18 +41,25 @@ int main (int argc, char const *argv[]) {
     si_server.sin_port = htons(s_port);
     si_server.sin_addr.s_addr = INADDR_ANY;
 
-	if (bind(sockfd, (struct sockaddr *) &si_server, sizeof(si_server)) < 0)
-		printf("ERROR on binding\n");
+	// if (bind(sockfd, (struct sockaddr *) &si_server, sizeof(si_server)) < 0)
+		// printf("ERROR on binding\n");
+    if (inet_aton(SERVER , &si_server.sin_addr) == 0) 
+    {
+        fprintf(stderr, "inet_aton() failed\n");
+        exit(1);
+    }
 
 	// listen(sockfd,5);
 	
-	if(sendto(sockfd, REQUEST_ECHO, strlen(REQUEST_ECHO), 
-		0, (struct sockaddr *)&si_server, sizeof(si_server)) <0)
+	if(sendto(sockfd, REQUEST_ECHO, strlen(REQUEST_ECHO), 0, (struct sockaddr *)&si_server, sizeof(si_server)) <0)
 		printf("ERROR on sendto");
-	while(1){
-		// if (recvfrom(sockfd, buf, 500, 0, NULL,NULL) < 0)
-			// printf("ERROR on recvfrom");
-	}
+
+	// while(1){
+		if (recvfrom(sockfd, buf, 500, 0, NULL,NULL) < 0)
+			printf("ERROR on recvfrom");
+        else
+            printf("%s", buf);
+	// }
 	return 0;
 
 }

@@ -1,6 +1,7 @@
 package edu.gatech.opsai;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 import android.util.Log;
@@ -30,16 +31,20 @@ public class CommandLineUtil {
 		String message 		= "";
 		String runtimeInput = cmd;
 
-		try {
-			process = Runtime.getRuntime().exec(runtimeInput);
+			try {
+				process = Runtime.getRuntime().exec(runtimeInput);
+			
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			message += "";
 			while ((line = bufferedReader.readLine()) != null) {
 				message += line + "\n";
 			}
 			int status = process.waitFor();
-		} catch (Exception e) {								
-		}
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		return message;
 	}
 

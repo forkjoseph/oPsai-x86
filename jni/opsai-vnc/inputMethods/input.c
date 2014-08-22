@@ -50,21 +50,38 @@ void initInput()
     1 /* Version id. */
   }; 
 
-  if((inputfd = suinput_open("Generic", &id)) == -1)
+  if((inputfd = suinput_open("qwerty", &id)) == -1)
   {
+	  printf("CANNOT CREATE virtual kbd devices\n");
     L("cannot create virtual kbd device.\n");
 //    sendMsgToGui("~SHOW|Cannot create virtual input device!\n");
     //  exit(EXIT_FAILURE); do not exit, so we still can see the framebuffer
   }
-  ptr_abs(inputfd, 0, 0);
-  suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
-  suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-
 }
 
 
 int keysym2scancode(rfbBool down, rfbKeySym c, rfbClientPtr cl, int *sh, int *alt)
 {
+	/* just for oPsai
+	* menu key is insert
+	* home key is home
+	* back key is page up
+	* Got keysym: ff63 (down=1) Insert -> KEY_MENU  008b
+	Got keysym: ff63 (down=0)
+	Got keysym: ff50 (down=1)  Home -> KEY_HOMEPAGE 00ac
+	Got keysym: ff50 (down=0)
+	Got keysym: ff55 (down=1)  Page UP -> KEY_BACK  009e
+	Got keysym: ff55 (down=0)
+	*
+	*/
+	if (c == 0xff63)
+	  return 139;
+	else if (c == 0xff50)
+	//	  return 172;
+	  return KEY_HOME;
+	else if (c == 0xff55)
+	  return 158;
+
   int real=1;
   if ('a' <= c && c <= 'z')
   return qwerty[c-'a'];
@@ -97,6 +114,8 @@ int keysym2scancode(rfbBool down, rfbKeySym c, rfbClientPtr cl, int *sh, int *al
     (*sh) = spec4sh[c-123]; 
     return spec4[c-123];
   } 
+
+
   switch(c)
   {
     case 0xff08: return 14;// backspace
@@ -115,8 +134,8 @@ int keysym2scancode(rfbBool down, rfbKeySym c, rfbClientPtr cl, int *sh, int *al
     case 0xff50: return KEY_HOME;// home 
     case 0xFFC8: rfbShutdownServer(cl->screen,TRUE); return 0; //F11 disconnect
     case 0xFFC9:  
-    L("F12 closing...");    
-    exit(0); //F10 closes daemon
+    	L("F12 closing...");
+    	exit(0); //F10 closes daemon
     break;
 //    case 0xffc1: down?rotate(-1):0; return 0; // F4 rotate
     case 0xffff: return 158;// del -> back
@@ -210,124 +229,109 @@ void keyEvent(rfbBool down, rfbKeySym key, rfbClientPtr cl)
 
   if ((code = keysym2scancode(down, key, cl,&sh,&alt)))
   {
-
+	  printf("scancode %04x\n", (unsigned int) code);
     int ret=0;
 
-    if (key && down)
-    {
-      if (sh) suinput_press(inputfd, 42); //left shift
-      if (alt) suinput_press(inputfd, 56); //left alt
+//    if (key && down)
+//    {
+//      if (sh) suinput_press(inputfd, 42); //left shift
+//      if (alt) suinput_press(inputfd, 56); //left alt
+    suinput_write(inputfd, EV_KEY, 2, 1);
+    suinput_write(inputfd, EV_KEY, 2, 0);
 
-      ret=suinput_press(inputfd,code);
-      ret=suinput_release(inputfd,code);
+//      ret=suinput_press(inputfd,code);
+//      ret=suinput_release(inputfd,code);
 
-      if (alt) suinput_release(inputfd, 56); //left alt
-      if (sh) suinput_release(inputfd, 42); //left shift
-    }
-    else
-    ;//ret=suinput_release(inputfd,code);
-
+//      if (alt) suinput_release(inputfd, 56); //left alt
+//      if (sh) suinput_release(inputfd, 42); //left shift
+//    }
+//    else
+//    ;//ret=suinput_release(inputfd,code);
+//
     //     L("injectKey (%d, %d) ret=%d\n", code , down,ret);    
   }
 }
 
-
+/* buttonMask 1 == DOWN*/
+/* Physical keys are /dev/input/event0 */
+/* Soft keys are /dev/input/event1 */
 
 void ptrEvent(int buttonMask, int x, int y, rfbClientPtr cl)
 {
 
-  static int leftClicked=0,rightClicked=0,middleClicked=0;
-  static int oldX = 0, oldY = 0;
-  printf("Got ptr Event for %d, %d, %d, oldX: %d, oldY: %d\n", buttonMask, x, y, oldX, oldY);
+  static int leftClicked=0,rightClicked=0,middleClicked=0, oldX = 0, oldY = 0;
+  printf("Got ptr Event for %d, %d, %d, %d, %d\n", buttonMask, x, y, oldX, oldY);
 
   if ( inputfd == -1 )
     return;
 
-//  setIdle(0);
-//  transformTouchCoordinates(&x,&y,cl->screen->width,cl->screen->height);
+  oldX = x;
+  oldY = y;
 
-  /*if ((buttonMask | 1) && !leftClicked){
-	  oldX = x; // 3.2
-	  oldY = y; // 5.12
-	suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
-	suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
-	suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
-	suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-  }*/
+  transformTouchCoordinates(&x,&y,cl->screen->width,cl->screen->height);
 
-  /*if ((buttonMask & 1) && leftClicked) { //left btn clicked and moving
-		static int i = 0;
-		i = i + 1;
-		printf("left btn clicked and moving\n");
-		if (i % 10 == 1){ //some tweak to not report every move event
-			suinput_write(inputfd, EV_ABS, ABS_X, x * 3.2);
-			suinput_write(inputfd, EV_ABS, ABS_Y, y * 5.12);
-			suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-		}
-	} else */
-
-//  if (oldX != x && oldY != y ) {
-	static int i = 0;
-	i = i + 1;
-	int check = 0;
-	check = ptr_abs(inputfd, x, y);
-	if (check != 0 )
-		printf("Failed at %d, %d\n", x,y);
-
-	oldX = x;
-	oldY = y;
-
-//	check = suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
-	suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-
-	if ((buttonMask & 1) != 1){
-		suinput_write(inputfd, EV_KEY, BTN_TOUCH, buttonMask);
+  if((buttonMask & 1)&& leftClicked) {//left btn clicked and moving
+	  printf("%5s", "Stage 2");
+	  static int i=0;
+	  i=i+1;
+	  // I made this much change
+//	  if (i%10==1)//some tweak to not report every move event
+//	  {
+		suinput_write(inputfd, EV_ABS, ABS_X, x);
+		suinput_write(inputfd, EV_ABS, ABS_Y, y);
 		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-	}else {
-		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
-		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-	}
+		printf(" reported\n");
+//	  } else {
+//		  printf("\n");
+//	  }
+	 }
+  else if (buttonMask & 1)//left btn clicked
+  {
+	// Okay from this point, I'm going to make a click
+    leftClicked=1;
+	printf("%5s\n", "Stage 1");
+    suinput_write(inputfd, EV_ABS, ABS_X, x);
+    suinput_write(inputfd, EV_ABS, ABS_Y, y);
+    suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
+    suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
 
-	if (oldX == x && oldY == y && buttonMask == 0) // the end of one touch
-		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
 
+  }
+  else if (leftClicked)//left btn released
+  {
+	// report to OS to make sys call
+	printf("%5s\n", "Stage 3");
+    leftClicked=0;
+    suinput_write(inputfd, EV_ABS, ABS_X, x);
+    suinput_write(inputfd, EV_ABS, ABS_Y, y);
+    suinput_write(inputfd, EV_KEY, BTN_TOUCH,0);
+    suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+  } else {
+	printf("%5s\n", "Stage 0");
+  }
 
-//  }
-  	/* if (buttonMask & 1) { //left btn clicked
-		leftClicked = 1;
-		ptr_abs(inputfd, x, y);
-		printf("left btn clicked\n");
-		oldX = x;
-		oldY = y;
-		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 1);
-		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+  if (buttonMask & 4)//right btn clicked
+  {
+    rightClicked=1;
+    suinput_press(inputfd,158); //back key
+  }
+  else if (rightClicked)//right button released
+  {
+    rightClicked=0;
+    suinput_release(inputfd,158);
+  }
 
-	} else if (leftClicked) { //left btn released
-		leftClicked = 0;
-		ptr_abs(inputfd, x, y);
-		printf("left btn released\n");
-		oldX = x;
-		oldY = y;
-		suinput_write(inputfd, EV_KEY, BTN_TOUCH, 0);
-		suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
-	} */
-
-	if (buttonMask & 4) {//right btn clicked
-		rightClicked = 1;
-		suinput_press(inputfd, 158); //back key
-	} else if (rightClicked) {//right button released
-		rightClicked = 0;
-		suinput_release(inputfd, 158);
-	}
-
-	if (buttonMask & 2) {//mid btn clicked
-		middleClicked = 1;
-		suinput_press(inputfd, KEY_END);
-	} else if (middleClicked) {// mid btn released
-		middleClicked = 0;
-		suinput_release(inputfd, KEY_END);
-	}
-}
+  if (buttonMask & 2)//mid btn clicked
+  {
+    middleClicked=1;
+    suinput_press( inputfd,KEY_END);
+  }
+    else if (middleClicked)// mid btn released
+    {
+      middleClicked=0;
+      suinput_release( inputfd,KEY_END);
+    }
+    }
 
 
 inline void transformTouchCoordinates(int *x, int *y,int width,int height)
@@ -335,6 +339,7 @@ inline void transformTouchCoordinates(int *x, int *y,int width,int height)
   int scale=4096.0;
   int old_x=*x,old_y=*y;
   int rotation=0; //getCurrentRotation();
+  printf("%5s : %d, %d\n", "Incoming", *x, *y);
 
   if (rotation==0)
   {  
@@ -356,7 +361,7 @@ inline void transformTouchCoordinates(int *x, int *y,int width,int height)
     *y =old_x*scale/width-scale/2.0; 
     *x =(height - old_y)*scale/height-scale/2.0;
   }
-
+  printf("%5s : %d, %d\n", "Outgoing", *x, *y);
 }
 
 

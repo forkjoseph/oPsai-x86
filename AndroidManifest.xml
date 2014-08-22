@@ -33,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="ResListActivity">
+        </activity>
 
         <service android:name="ServerManager" >
             <intent-filter>

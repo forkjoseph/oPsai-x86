@@ -381,7 +381,6 @@ int main(int argc, char **argv)
 	printf("Initializing framebuffer device " FB_DEVICE "...\n");
 	init_fb();
 
-
 	initInput();
 
 	init_fb_server(argc, argv);
