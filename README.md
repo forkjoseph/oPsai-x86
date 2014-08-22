@@ -3,6 +3,7 @@ oPsai: Okay, PCloud Show As Is
 ![ScreenShot](https://github.com/leecom3025/oPsai-x86/blob/master/res/drawable-mdpi/github_logo.png)
 
 oPsai project is a client side PCloud in Android.
+
 This is oPsai daemon test version for x86 archi. 
 
 The project is being built on Galaxy Tab 3 10.1 GT-P5210 
