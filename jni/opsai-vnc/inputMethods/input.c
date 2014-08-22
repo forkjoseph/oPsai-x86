@@ -50,12 +50,14 @@ void initInput()
     1 /* Version id. */
   }; 
 
+  /* Note
+   * If you want to use traditional mouse and keyboard, use Generic
+   * If you want to use touchscreen (smartphone), use qwerty
+   */
   if((inputfd = suinput_open("qwerty", &id)) == -1)
   {
 	  printf("CANNOT CREATE virtual kbd devices\n");
-    L("cannot create virtual kbd device.\n");
-//    sendMsgToGui("~SHOW|Cannot create virtual input device!\n");
-    //  exit(EXIT_FAILURE); do not exit, so we still can see the framebuffer
+	  L("cannot create virtual kbd device.\n");
   }
 }
 
@@ -72,15 +74,25 @@ int keysym2scancode(rfbBool down, rfbKeySym c, rfbClientPtr cl, int *sh, int *al
 	Got keysym: ff50 (down=0)
 	Got keysym: ff55 (down=1)  Page UP -> KEY_BACK  009e
 	Got keysym: ff55 (down=0)
+
+	Got keysym: ffbe (down=1) // F1 -> VOLUME down
+	Got keysym: ffbe (down=0)
+	Got keysym: ffbf (down=1) // F2 -> Volume up
+	Got keysym: ffbf (down=0)
 	*
 	*/
 	if (c == 0xff63)
 	  return 139;
 	else if (c == 0xff50)
-	//	  return 172;
-	  return KEY_HOME;
+//	  return 172;
+		return KEY_HOME;
 	else if (c == 0xff55)
 	  return 158;
+	else if (c == 0xffbe)
+	  return 114;
+	else if (c == 0xffbf)
+	  return 115;
+
 
   int real=1;
   if ('a' <= c && c <= 'z')
@@ -220,7 +232,6 @@ void keyEvent(rfbBool down, rfbKeySym key, rfbClientPtr cl)
   int code;
   printf("Got keysym: %04x (down=%d)\n", (unsigned int)key, (int)down);
 
-//  setIdle(0);
   int sh = 0;
   int alt = 0;
 
@@ -229,27 +240,36 @@ void keyEvent(rfbBool down, rfbKeySym key, rfbClientPtr cl)
 
   if ((code = keysym2scancode(down, key, cl,&sh,&alt)))
   {
-	  printf("scancode %04x\n", (unsigned int) code);
+	printf("scancode %04x\n", (unsigned int) code);
     int ret=0;
 
-//    if (key && down)
-//    {
-//      if (sh) suinput_press(inputfd, 42); //left shift
-//      if (alt) suinput_press(inputfd, 56); //left alt
-    suinput_write(inputfd, EV_KEY, 2, 1);
-    suinput_write(inputfd, EV_KEY, 2, 0);
+    if (key && down)
+    {
+      if (sh) suinput_press(inputfd, 42); //left shift
+      if (alt) suinput_press(inputfd, 56); //left alt
 
-//      ret=suinput_press(inputfd,code);
-//      ret=suinput_release(inputfd,code);
+      ret = suinput_press(inputfd,code);
+      if (isHardKey(code)){ // Hard key requires one more sys_report
+          ret = suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
+      }
+      ret = suinput_release(inputfd,code);
+      ret = suinput_write(inputfd, EV_SYN, SYN_REPORT, 0);
 
-//      if (alt) suinput_release(inputfd, 56); //left alt
-//      if (sh) suinput_release(inputfd, 42); //left shift
-//    }
-//    else
-//    ;//ret=suinput_release(inputfd,code);
-//
-    //     L("injectKey (%d, %d) ret=%d\n", code , down,ret);    
+      if (alt) suinput_release(inputfd, 56); //left alt
+      if (sh) suinput_release(inputfd, 42); //left shift
+    }
   }
+}
+
+int isHardKey(int code) {
+	if (code == 172){ // middle key == HOMEPAGE
+		printf("Hard key detected!\n");
+		return 1;
+	}else if (code == 114) // Volume down
+		return 1;
+	else if (code == 115) // Volume up
+		return 1;
+	return 0;
 }
 
 /* buttonMask 1 == DOWN*/

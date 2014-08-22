@@ -34,5 +34,6 @@ void transformTouchCoordinates(int *x, int *y,int,int);
 void ptrEvent(int buttonMask, int x, int y, rfbClientPtr cl);
 void keyEvent(rfbBool down, rfbKeySym key, rfbClientPtr cl);
 void cleanupInput();
+int isHardKey(int code);
 
 #endif
