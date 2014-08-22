@@ -1,4 +1,6 @@
 oPsai: Okay, PCloud Show As Is
+![ScreenShot](https://github.com/leecom3025/oPsai-x86/blob/master/res/drawable-mdpi/github_logo.png)
+
 ====================================================
 oPsai project is a client side PCloud in Android.
 
