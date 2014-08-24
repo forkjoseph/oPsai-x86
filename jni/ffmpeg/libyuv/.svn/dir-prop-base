@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 64
+build
+buildtools
+chromium_deps
+google_apis
+testing
+third_party
+
+
+END
