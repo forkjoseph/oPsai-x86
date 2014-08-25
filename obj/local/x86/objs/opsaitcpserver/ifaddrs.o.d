@@ -1,5 +1,5 @@
-obj/local/x86/objs/opsaitcpserver/ifaddrs.o: jni/opsa-tcp/ifaddrs.c \
- jni/opsa-tcp/ifaddrs.h \
+obj/local/x86/objs/opsaitcpserver/ifaddrs.o: jni/opsai-tcp/ifaddrs.c \
+ jni/opsai-tcp/ifaddrs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/api-level.h \
@@ -79,7 +79,7 @@ obj/local/x86/objs/opsaitcpserver/ifaddrs.o: jni/opsa-tcp/ifaddrs.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/netlink.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/rtnetlink.h
 
-jni/opsa-tcp/ifaddrs.h:
+jni/opsai-tcp/ifaddrs.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h:
 

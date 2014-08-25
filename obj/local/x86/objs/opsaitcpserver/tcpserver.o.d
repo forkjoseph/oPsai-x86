@@ -1,4 +1,4 @@
-obj/local/x86/objs/opsaitcpserver/tcpserver.o: jni/opsa-tcp/tcpserver.c \
+obj/local/x86/objs/opsaitcpserver/tcpserver.o: jni/opsai-tcp/tcpserver.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/cdefs_elf.h \
@@ -52,7 +52,7 @@ obj/local/x86/objs/opsaitcpserver/tcpserver.o: jni/opsa-tcp/tcpserver.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/sockios.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h \
- jni/opsa-tcp/ifaddrs.h \
+ jni/opsai-tcp/ifaddrs.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/ioctl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/asm/ioctl.h \
@@ -77,7 +77,7 @@ obj/local/x86/objs/opsaitcpserver/tcpserver.o: jni/opsa-tcp/tcpserver.c \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/hdlc/ioctl.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/arpa/inet.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h \
- jni/opsa-tcp/tcpserver.h \
+ jni/opsai-tcp/tcpserver.h \
  /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/stdio.h:
@@ -186,7 +186,7 @@ obj/local/x86/objs/opsaitcpserver/tcpserver.o: jni/opsa-tcp/tcpserver.c \
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/linux/uio.h:
 
-jni/opsa-tcp/ifaddrs.h:
+jni/opsai-tcp/ifaddrs.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/sys/ioctl.h:
 
@@ -236,6 +236,6 @@ jni/opsa-tcp/ifaddrs.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/assert.h:
 
-jni/opsa-tcp/tcpserver.h:
+jni/opsai-tcp/tcpserver.h:
 
 /home/josephlee/Development/android-ndk-r9d/platforms/android-17/arch-x86/usr/include/android/log.h:
