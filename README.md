@@ -1,6 +1,7 @@
 oPsai: Okay, PCloud Show As Is
 ====================================================
 ![ScreenShot](https://github.com/leecom3025/oPsai-x86/blob/master/res/drawable-mdpi/github_logo.png)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/sOgNuBmikaA/0.jpg)](http://www.youtube.com/watch?v=sOgNuBmikaA)
 
 oPsai project is a client side PCloud in Android.
 
@@ -14,7 +15,7 @@ Thought it is a branch of LibVNCServer, it rarely uses the code or plugins.
 
 As someone (JS), "HIGHLY QUALIFIED" software developer did not have time to answer a few questions, I decided to take the problem from the scractch and update it. 
 
-Unlike SOMEONE, shot me an email if you have a question. 
+Unlike SOMEONE, shot me an email if you have a question (gtpcloud@gmail.com). 
 
 =========================
 Notice:
@@ -24,5 +25,4 @@ Notice:
 	Some part of code from droid-VNC server (https://github.com/oNaiPs/droid-VNC-server) 
 	is used to replicate common problem and to show diverse ways to resolve the problems. 
 	oPsai is built on rfb version 3.8
-	PortAudio is developed by http://www.portaudio.com under MIT license. 
  
