@@ -101,6 +101,7 @@ public class ScreenService extends IntentService {
 				}
 				Intent i = new Intent(this, ResListActivity.class);
 				i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 				i.putExtra("DISPLAY", display_resources);
 				startActivity(i);
 			}

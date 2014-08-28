@@ -160,6 +160,7 @@ public class ServerManager extends Service {
 	}
 	
 	void killServer() {
+		dismissRunning();
 		c = new CommandLineUtil();
 		String result = c.runCommand("pgrep -o /system/lib/opsaivncserver.so");
 //		String result = c.runCommand("pgrep -o /data/data/edu.gatech.opsai/lib/libopsaivncserver.so"); // for final release

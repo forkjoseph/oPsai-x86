@@ -10,6 +10,7 @@ import android.app.ListActivity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 
 public class ResListActivity extends Activity {
 	private ServerManager s;
+	private WakeUpReceiver mBroadcastReceiver;
 
 	@Override
 	  protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,8 @@ public class ResListActivity extends Activity {
 	            	s.startServer();
 //	                adapter.notifyDataSetChanged();
 	                view.setAlpha(1);
+	                Toast.makeText(getApplicationContext(), list.get(position) + " is selected!", Toast.LENGTH_LONG).show();
+	                finish();
 	              }
 	        });
 	      }
@@ -68,6 +72,20 @@ public class ResListActivity extends Activity {
 	  }
 	void doBindService() {
 		bindService(new Intent(this, ServerManager.class), mConnection, Context.BIND_AUTO_CREATE);
+	}
+	
+	public void onDestroy() {
+		super.onDestroy();
+//		unbindService(mConnection);
+		unregisterReceiver(mBroadcastReceiver);
+	}
+	
+	protected void onResume() {
+		super.onResume();
+		IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
+		filter.addAction(Intent.ACTION_SCREEN_OFF);
+		mBroadcastReceiver = new WakeUpReceiver();
+        registerReceiver(mBroadcastReceiver, filter);
 	}
     
     private ServiceConnection mConnection = new ServiceConnection() {
