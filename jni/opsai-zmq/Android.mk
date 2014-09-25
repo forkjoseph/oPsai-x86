@@ -1,6 +1,6 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_MODULE:= opsaizmqserver
+LOCAL_MODULE:= pcloudzmqserver
 
 LOCAL_SRC_FILES:= \
 	zmqserver.c \
