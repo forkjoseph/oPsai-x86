@@ -136,7 +136,7 @@ public class MainActivity extends Activity
     				String s;
     				BufferedReader reader;
     				BufferedWriter writer = null;
-    				s = "10.0.0.20";
+    				s = "10.0.0.14";
     				try {
 //    					reader = new BufferedReader(new FileReader(f));
 //    					D("Current IP address:");
