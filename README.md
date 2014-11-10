@@ -16,7 +16,7 @@ Thought it is a branch of LibVNCServer, it rarely uses the code or plugins.
 
 As someone (JS), "HIGHLY QUALIFIED" software developer did not have time to answer a few questions, I decided to take the problem from the scractch and update it. 
 
-Unlike SOMEONE, shot me an email if you have a question (gtpcloud@gmail.com). 
+Unlike SOMEONE, shot me an email if you have a question remove "!" (g!t!p!c!l!o!u!d@gmail.com). 
 
 =========================
 Notice:
