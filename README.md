@@ -6,17 +6,13 @@ oPsai: Okay, PCloud Show As Is
 
 oPsai project is a client side PCloud in Android.
 
-This is oPsai daemon test version for x86 archi. 
+Details in oPsai design & arch. can be found at [here](http://swiki.cc.gatech.edu/ugResearch/uploads/25/oPsai%20-%20submit%20to%20swiki.pdf).
 
 The project is being built on Galaxy Tab 3 10.1 GT-P5210 
 (x86 powered by Intel) with Android version 4.2.2(JDQ39.P5210XXUAMG6),
 Kernel version 3.4.34-1135839 and CWR version 6.9. 
 
 Thought it is a branch of LibVNCServer, it rarely uses the code or plugins. 
-
-As someone (JS), "HIGHLY QUALIFIED" software developer did not have time to answer a few questions, I decided to take the problem from the scractch and update it. 
-
-Unlike SOMEONE, shot me an email if you have a question. 
 
 =========================
 Notice:
